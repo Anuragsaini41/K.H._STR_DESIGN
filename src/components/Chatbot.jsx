@@ -23,6 +23,11 @@ const Chatbot = () => {
 
   useEffect(() => {
     scrollToBottom()
+    // Add a slight delay to ensure smooth transition when messages change
+    const timer = setTimeout(() => {
+      scrollToBottom()
+    }, 300)
+    return () => clearTimeout(timer)
   }, [messages])
 
   useEffect(() => {
@@ -220,23 +225,21 @@ const Chatbot = () => {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Quick Replies */}
-        {messages.length === 1 && (
-          <div className="quick-replies">
-            <p>Quick options:</p>
-            <div className="quick-replies-buttons">
-              {getQuickReplies().map((reply, index) => (
-                <button
-                  key={index}
-                  className="quick-reply-btn"
-                  onClick={() => handleQuickReply(reply)}
-                >
-                  {reply}
-                </button>
-              ))}
-            </div>
+        {/* Quick Replies Container - Always present for layout consistency */}
+        <div className={`quick-replies ${messages.length === 1 ? 'visible' : 'hidden'}`}>
+          <p>Quick options:</p>
+          <div className="quick-replies-buttons">
+            {getQuickReplies().map((reply, index) => (
+              <button
+                key={index}
+                className="quick-reply-btn"
+                onClick={() => handleQuickReply(reply)}
+              >
+                {reply}
+              </button>
+            ))}
           </div>
-        )}
+        </div>
 
         {/* Contact Info */}
         <div className="chatbot-contact-info">

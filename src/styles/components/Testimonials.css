@@ -516,13 +516,18 @@
 @media (max-width: 1023px) and (min-width: 769px) {
   .testimonials-grid.reference-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 2.5rem;
     justify-items: center;
+  }
+  
+  .testimonial-item.reference-item {
+    max-width: 350px;
   }
   
   .trust-indicators {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    padding: 2.5rem 2rem;
   }
 }
 
@@ -534,6 +539,8 @@
   .testimonials-grid.reference-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    max-width: 450px;
+    margin: 0 auto;
   }
   
   .testimonial-item.reference-item {
@@ -548,6 +555,28 @@
   
   .testimonials.reference-style .section-header h2 {
     font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonials.reference-style .section-header p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .client-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .client-info p {
+    font-size: 0.85rem;
   }
   
   .trust-indicators {
@@ -559,11 +588,34 @@
   .trust-number {
     font-size: 2rem;
   }
+  
+  .trust-label {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .testimonials.reference-style .container {
+    padding: 0 0.75rem;
+  }
+  
   .testimonials.reference-style .section-header h2 {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .testimonials.reference-style .section-header p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .testimonials-grid.reference-grid {
+    max-width: 350px;
+    gap: 1.5rem;
+  }
+  
+  .testimonial-item.reference-item {
+    padding: 1.5rem 1.25rem;
   }
   
   .client-image-circle {
@@ -572,12 +624,78 @@
   }
   
   .testimonial-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+  
+  .client-info h4 {
+    font-size: 1rem;
+  }
+  
+  .client-info p {
+    font-size: 0.8rem;
   }
   
   .trust-indicators {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.25rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .trust-item {
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+  
+  .trust-number {
+    font-size: 1.8rem;
+  }
+  
+  .trust-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .testimonials.reference-style .container {
+    padding: 0 0.5rem;
+  }
+  
+  .testimonials.reference-style .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .testimonials-grid.reference-grid {
+    max-width: 300px;
+  }
+  
+  .testimonial-item.reference-item {
+    padding: 1.25rem 1rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.8rem;
+  }
+  
+  .client-info h4 {
+    font-size: 0.9rem;
+  }
+  
+  .client-info p {
+    font-size: 0.75rem;
+  }
+  
+  .trust-indicators {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .trust-number {
+    font-size: 1.6rem;
+  }
+  
+  .trust-label {
+    font-size: 0.75rem;
   }
 }
 

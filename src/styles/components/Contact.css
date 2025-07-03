@@ -602,28 +602,66 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 4rem 0;
+  }
+  
+  .contact .section-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  
+  .contact-form,
+  .contact-info {
+    padding: 2.5rem 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .contact {
     padding: 3rem 0;
   }
   
+  .contact .container {
+    padding: 0 1rem;
+  }
+  
   .contact .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
+  }
+  
+  .contact .section-header p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
   }
   
   .contact-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+    max-width: 550px;
   }
   
   .contact-form,
   .contact-info {
     padding: 2rem;
+    border-radius: 12px;
   }
   
   .contact-form h3,
   .contact-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
   }
   
   .contact .contact-item {
@@ -636,9 +674,9 @@
   }
   
   .contact-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
     color: white !important;
   }
   
@@ -661,10 +699,16 @@
   
   .contact .contact-item div p {
     font-size: 0.85rem;
+    line-height: 1.4;
   }
   
   .form-row {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
   }
   
   .contact-form input,
@@ -672,17 +716,50 @@
   .contact-form textarea {
     padding: 0.875rem 1rem;
     font-size: 0.95rem;
+    border-radius: 8px;
+  }
+  
+  .submit-button {
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
+  .contact {
+    padding: 2.5rem 0;
+  }
+  
+  .contact .container {
+    padding: 0 0.75rem;
+  }
+  
   .contact .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact .section-header p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-content {
+    gap: 1.5rem;
+    max-width: 400px;
   }
   
   .contact-form,
   .contact-info {
     padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .contact-form h3,
+  .contact-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
   
   .contact .contact-item {
@@ -691,36 +768,97 @@
     text-align: left;
     align-items: center;
     gap: 0.75rem;
+    margin-bottom: 1rem;
   }
   
   .contact-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 0;
-    color: white !important;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
   }
   
   .contact-icon svg {
-    width: 20px;
-    height: 20px;
-    color: white !important;
-    fill: white !important;
-  }
-  
-  .contact-icon svg path {
-    fill: white !important;
+    width: 18px;
+    height: 18px;
   }
   
   .contact .contact-item div {
-    padding: 1rem 0.5rem 1rem 0;
+    padding: 0.25rem 0;
   }
   
   .contact .contact-item div h4 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
   }
   
   .contact .contact-item div p {
     font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .form-group {
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-form label {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+  
+  .submit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact .section-header h2 {
+    font-size: 1.6rem;
+  }
+  
+  .contact-form,
+  .contact-info {
+    padding: 1.25rem 1rem;
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .contact-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .contact .contact-item div h4 {
+    font-size: 0.85rem;
+  }
+  
+  .contact .contact-item div p {
+    font-size: 0.75rem;
+  }
+  
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 0.75rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
   }
 }
 

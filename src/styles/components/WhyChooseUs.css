@@ -314,8 +314,17 @@
 @media (max-width: 1023px) and (min-width: 769px) {
   .features-grid.reference-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 2.5rem;
     justify-items: center;
+  }
+  
+  .feature-icon-circle {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .feature-icon {
+    font-size: 2.8rem;
   }
 }
 
@@ -327,42 +336,123 @@
   .features-grid.reference-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
   }
   
   .feature-icon-circle {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
   
   .feature-icon {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   
   .why-choose-us.reference-style .section-header h2 {
     font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+  
+  .why-choose-us.reference-style .section-header p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   .feature-item.reference-item {
-    padding: 1.5rem 1rem;
+    padding: 1.8rem 1.5rem;
+    text-align: center;
+  }
+  
+  .feature-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .feature-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 }
 
 @media (max-width: 480px) {
+  .why-choose-us.reference-style .container {
+    padding: 0 0.75rem;
+  }
+  
   .why-choose-us.reference-style .section-header h2 {
-    font-size: 1.75rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .why-choose-us.reference-style .section-header p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .features-grid.reference-grid {
+    max-width: 350px;
+    gap: 1.5rem;
   }
   
   .feature-icon-circle {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
   }
   
   .feature-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .feature-item.reference-item {
+    padding: 1.5rem 1.25rem;
   }
   
   .feature-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .feature-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 360px) {
+  .why-choose-us.reference-style .container {
+    padding: 0 0.5rem;
+  }
+  
+  .why-choose-us.reference-style .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .features-grid.reference-grid {
+    max-width: 300px;
+    gap: 1.25rem;
+  }
+  
+  .feature-icon-circle {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .feature-icon {
+    font-size: 1.6rem;
+  }
+  
+  .feature-item.reference-item {
+    padding: 1.25rem 1rem;
+  }
+  
+  .feature-content h3 {
+    font-size: 1rem;
+  }
+  
+  .feature-content p {
+    font-size: 0.8rem;
   }
 }
 

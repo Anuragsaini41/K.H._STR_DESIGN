@@ -2,7 +2,7 @@
 
 .chatbot-toggle {
   position: fixed;
-  bottom: 30px;
+  bottom: 25px;
   right: 30px;
   width: 65px;
   height: 65px;
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 999; /* Set to be below the chatbot window */
   box-shadow: var(--shadow-xl), 0 0 0 0 rgba(220, 38, 38, 0.4);
   transition: var(--transition-base);
   color: white;
@@ -44,7 +44,32 @@
   transform: rotate(90deg);
 }
 
-.chatbot-badge {
+@media (max-width: 480px) {
+  .chatbot-toggle.open {
+    opacity: 0.8;
+    transform: rotate(90deg) scale(0.9);
+  }
+  
+  .chatbot-toggle {
+    bottom: 20px; /* Keep toggle in original position */
+    right: 15px;
+    width: 55px;
+    height: 55px;
+    z-index: 999; /* Ensure proper stacking order */
+  }
+  
+  .chatbot-window {
+    bottom: 85px; /* Position window above toggle button */
+    right: 5px;
+    left: 5px;
+    width: auto;
+    height: 70vh; /* Adjusted height */
+    max-height: 500px;
+    min-height: 350px;
+    border-radius: 16px;
+    z-index: 1000; /* Ensure window appears above toggle */
+  }
+}  .chatbot-badge {
   position: absolute;
   top: -45px;
   right: -10px;
@@ -60,6 +85,12 @@
   transform: translateY(10px);
   animation: fadeInUp 0.6s ease-out 1.5s forwards;
   border: 2px solid var(--primary-color);
+}
+
+@media (max-width: 480px) {
+  .chatbot-badge {
+    display: none; /* Hide badge on mobile to prevent overlap */
+  }
 }
 
 .chatbot-badge::before {
@@ -83,10 +114,10 @@
 
 .chatbot-window {
   position: fixed;
-  bottom: 150px;
+  bottom: 100px; /* Adjusted distance from bottom to be more consistent with mobile view */
   right: 30px;
   width: 380px;
-  height: 520px;
+  height: 550px; /* Increased height */
   background: white;
   border-radius: 20px;
   box-shadow: var(--shadow-xl), 0 0 0 1px rgba(220, 38, 38, 0.1);
@@ -105,6 +136,7 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
 }
 
 .chatbot-header {
@@ -203,10 +235,11 @@
 
 .chatbot-messages {
   flex: 1;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
   overflow-y: auto;
-  max-height: 280px;
+  height: 320px; /* Further increased height to ensure first message visibility */
   background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  transition: height 0.3s ease;
 }
 
 .chatbot-messages::-webkit-scrollbar {
@@ -230,7 +263,7 @@
 .message {
   display: flex;
   gap: 0.75rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9rem; /* Reduced bottom margin */
   align-items: flex-start;
   opacity: 0;
   transform: translateY(20px);
@@ -463,15 +496,35 @@
 }
 
 .quick-replies {
-  padding: 1.5rem;
+  padding: 1rem;
   border-top: 1px solid var(--border-color);
   background: linear-gradient(135deg, #fafafa, #ffffff);
+  transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+  min-height: 20px; /* Minimum height to maintain layout consistency */
+  overflow: hidden;
+  z-index: 2; /* Ensure it appears above other elements */
+}
+
+.quick-replies.visible {
+  opacity: 1;
+  visibility: visible;
+  max-height: 180px; /* Reduced height to show default message */
+  overflow-y: auto; /* Allow scrolling if there are many options */
+}
+
+.quick-replies.hidden {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 0;
 }
 
 .quick-replies p {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--text-secondary);
-  margin: 0 0 1rem;
+  margin: 0 0 0.6rem; /* Reduced bottom margin */
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -480,22 +533,41 @@
 .quick-replies-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 0.5rem; /* Reduced gap between buttons */
+  transition: opacity 0.4s ease;
+  margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+.hidden .quick-replies-buttons {
+  opacity: 0;
 }
 
 .quick-reply-btn {
   background: white;
-  border: 2px solid var(--border-color);
+  border: 1px solid var(--border-color);
   color: var(--text-primary);
-  padding: 0.75rem 1.25rem;
-  border-radius: 30px;
-  font-size: 0.8rem;
+  padding: 0.4rem 0.85rem; /* Further reduced padding */
+  border-radius: 25px;
+  font-size: 0.75rem;
   cursor: pointer;
-  transition: var(--transition-base);
+  transition: var(--transition-base), transform 0.3s ease, opacity 0.3s ease;
   font-weight: 600;
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
+  animation: fadeInButton 0.4s forwards;
+  margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .quick-reply-btn::before {
@@ -526,6 +598,9 @@
   background: linear-gradient(135deg, #f8fafc, #ffffff);
   border-top: 1px solid var(--border-color);
   border-radius: 0 0 20px 20px;
+  min-height: 30px; /* Minimum height to maintain layout consistency */
+  position: relative;
+  z-index: 1;
 }
 
 .contact-items {
@@ -682,75 +757,151 @@
   transform: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .chatbot-window {
-    bottom: 135px;
-    right: 20px;
-    left: 20px;
-    width: auto;
-    height: 480px;
-  }
-  
-  .chatbot-toggle {
-    bottom: 25px;
-    right: 25px;
-    width: 60px;
-    height: 60px;
-  }
-  
-  .chatbot-badge {
-    top: -35px;
-    right: -5px;
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  .contact-items {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .contact-item {
-    justify-content: flex-start;
-    padding: 0.75rem;
-  }
-  
-  .chatbot-messages {
-    max-height: 240px;
-    padding: 1rem;
-  }
-}
-
+/* Enhanced Mobile Responsiveness */
 @media (max-width: 480px) {
-  .chatbot-window {
-    bottom: 125px;
-    right: 15px;
-    left: 15px;
-    height: 420px;
+  /* Hide any floating WhatsApp widgets except our mobile-whatsapp-btn */
+  .floating-whatsapp,
+  [class*="whatsapp-floating"],
+  [id*="whatsapp-floating"],
+  [class*="whatsapp_chat"],
+  [id*="whatsapp_chat"],
+  [class*="wa-widget"],
+  [id*="wa-widget"],
+  [class*="wa-chat"],
+  [id*="wa-chat"] {
+    display: none !important;
+  }
+  
+  /* Only hide the floating .whatsapp-btn, not the mobile-whatsapp-btn */
+  .header .whatsapp-btn {
+    display: none !important;
   }
   
   .chatbot-toggle {
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px; /* Keep original position */
+    right: 30px;
     width: 55px;
     height: 55px;
   }
   
-  .message-content {
-    max-width: 85%;
+  .chatbot-window {
+    bottom: 85px; /* Position above the toggle button with some space */
+    right: 5px;
+    left: 5px;
+    width: auto;
+    height: 80vh; /* Reduced height to fit above toggle */
+    min-height: 350px;
+    border-radius: 16px;
   }
-  
   .chatbot-header {
-    padding: 1rem;
+    padding: 0.7rem 0.8rem;
+    min-height: 56px;
+  }
+  .chatbot-messages {
+    height: 45vh; /* Adjusted height for mobile view */
+    min-height: 120px;
+    padding: 0.5rem 0.3rem;
+    font-size: 0.92rem;
+  }
+  .message-content {
+    max-width: 98vw;
+  }
+  .quick-replies {
+    padding: 0.7rem 0.5rem;
+  }
+  .quick-replies-buttons {
+    gap: 0.4rem;
+  }
+  .quick-reply-btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 0.25rem; /* Reduced margin on mobile */
   }
   
-  .chatbot-messages {
-    max-height: 200px;
-    padding: 0.75rem;
+  .quick-replies.visible {
+    max-height: 150px; /* Reduced height on mobile */
+    padding: 0.7rem 0.5rem;
+  }
+  .chatbot-contact-info {
+    padding: 0.7rem 0.5rem;
+  }
+  .contact-items {
+    gap: 0.3rem;
+  }
+  .contact-item {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.7rem;
+    min-width: 80px;
+  }
+  .chatbot-input {
+    padding: 0.7rem 0.5rem;
+  }
+  .input-container {
+    padding: 0.5rem 0.7rem;
+    gap: 0.5rem;
+  }
+  .input-container input {
+    font-size: 0.9rem;
+  }
+  .send-button {
+    width: 38px;
+    height: 38px;
+    position: relative;
+    z-index: 1; /* Ensure proper stacking */
   }
   
   .chatbot-input {
-    padding: 1rem;
+    position: relative;
+    z-index: 1; /* Ensure proper stacking */
+  }
+}
+
+@media (max-width: 360px) {
+  .chatbot-toggle {
+    bottom: 15px; /* Keep original position but slightly adjusted for smallest screens */
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+  }
+  
+  .chatbot-window {
+    left: 2px;
+    right: 2px;
+    bottom: 75px; /* Position above the toggle button for smallest screens */
+    border-radius: 10px;
+    height: 70vh; /* Reduced height to fit above toggle */
+    z-index: 1000;
+  }
+  .chatbot-header {
+    padding: 0.5rem 0.5rem;
+    min-height: 48px;
+  }
+  .chatbot-messages {
+    height: 40vh; /* Adjusted for smallest screens */
+    font-size: 0.85rem;
+  }
+  .quick-reply-btn {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.45rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .quick-replies.visible {
+    max-height: 140px;
+    padding: 0.6rem 0.4rem;
+  }
+  .contact-item {
+    font-size: 0.65rem;
+    min-width: 60px;
+    padding: 0.4rem 0.4rem;
+  }
+  .input-container input {
+    font-size: 0.8rem;
+  }
+  .send-button {
+    width: 32px;
+    height: 32px;
   }
 }

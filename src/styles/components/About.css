@@ -440,6 +440,27 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .about .container {
+    padding: 0 1.5rem;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  
+  .about-text h3 {
+    font-size: 2rem;
+  }
+  
+  .about .stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about .container {
     padding: 0 1rem;
@@ -453,25 +474,36 @@
   }
   
   .about-text h3 {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin-bottom: 1.25rem;
   }
   
   .about-text p {
     font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
   }
   
   .about .stats {
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
   }
   
   .about .stat {
-    min-width: 110px;
-    padding: 1.25rem 0.75rem;
+    min-width: 120px;
+    padding: 1.5rem 1rem;
+    flex: 1;
+    max-width: 150px;
   }
   
   .about .stat h4 {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+  }
+  
+  .about .stat p {
+    font-size: 0.85rem;
   }
   
   .image-placeholder {
@@ -495,6 +527,101 @@
   .values-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about .container {
+    padding: 0 0.75rem;
+  }
+  
+  .about-content {
+    gap: 1.5rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+  
+  .about .stats {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  .about .stat {
+    min-width: auto;
+    max-width: 200px;
+    width: 100%;
+    padding: 1.25rem 0.8rem;
+  }
+  
+  .about .stat h4 {
+    font-size: 1.6rem;
+  }
+  
+  .about .stat p {
+    font-size: 0.8rem;
+  }
+  
+  .image-placeholder {
+    min-height: 200px;
+    aspect-ratio: 4/3;
+  }
+  
+  .about-cards {
+    gap: 1rem;
+  }
+  
+  .about-card {
+    padding: 1.25rem;
+  }
+  
+  .about-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .about-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 360px) {
+  .about .container {
+    padding: 0 0.5rem;
+  }
+  
+  .about-text h3 {
+    font-size: 1.4rem;
+  }
+  
+  .about-text p {
+    font-size: 0.85rem;
+  }
+  
+  .about .stat {
+    padding: 1rem 0.6rem;
+  }
+  
+  .about .stat h4 {
+    font-size: 1.4rem;
+  }
+  
+  .about .stat p {
+    font-size: 0.75rem;
+  }
+  
+  .about-card {
+    padding: 1rem;
   }
 }
 
