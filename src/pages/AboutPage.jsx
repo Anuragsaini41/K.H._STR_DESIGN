@@ -58,25 +58,21 @@ const AboutPage = () => {
       description: "Comprehensive structural design solutions for residential, commercial, and industrial projects using advanced engineering principles.",
       image: "/images/building 1.jpg"
     },
-    {
-      title: "Structural Analysis",
-      description: "Detailed structural analysis and engineering calculations to ensure safety, stability, and code compliance.",
-      image: "/images/building 3.jpg"
-    },
+    
     {
       title: "Structural Audit",
       description: "Professional evaluation of existing structures to assess integrity, safety, and compliance with current standards.",
-      image: "/images/building 4.jpg"
+      image: "/images/building 3.jpg"
     },
     {
       title: "Site Supervision",
       description: "On-site structural supervision to ensure proper implementation of designs and quality standards.",
-      image: "/images/building 1.jpg"
+      image: "/images/building 4.jpg"
     },
     {
       title: "Drafting Services",
       description: "Professional structural drafting and detailed drawings for construction and fabrication purposes.",
-      image: "/images/building 5.jpg"
+      image: "/images/building 3.jpg"
     }
   ]
 
