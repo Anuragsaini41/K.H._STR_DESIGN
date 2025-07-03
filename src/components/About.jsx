@@ -69,7 +69,7 @@ const About = () => {
             <FaAward />
             <span>About Our Company</span>
           </Motion.div>
-          <h2>Know About K.H. STR Design</h2>
+          <h2>Know About K.H. STR Design Solution</h2>
           <p>Dynamic Start-up Specializing in Structural Steel Design</p>
         </Motion.div>
 
@@ -90,7 +90,7 @@ const About = () => {
                 <FaCogs className="title-icon" />
                 Who We Are
               </h3>
-              <p>K.H. STR DESIGN is a dynamic start-up company specializing in structural steel design services for buildings, offices, and commercial projects. Our team is composed of experienced engineers and designers who are passionate about delivering innovative, safe, and efficient steel structure solutions.</p>
+              <p>K.H. STR Design Solution is a dynamic start-up company specializing in structural steel design services for buildings, offices, and commercial projects. Our team is composed of experienced engineers and designers who are passionate about delivering innovative, safe, and efficient steel structure solutions.</p>
             </Motion.div>
             
             <Motion.div
@@ -98,7 +98,7 @@ const About = () => {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <p>At KH, we combine cutting-edge technology with industry best practices to support architects, developers, and contractors in turning their visions into reality. Whether it's a small office space or a large-scale building, we are committed to providing high-quality, cost-effective design services tailored to each client's unique needs.</p>
+              <p>At K.H. STR Design Solution, we combine cutting-edge technology with industry best practices to support architects, developers, and contractors in turning their visions into reality. Whether it's a small office space or a large-scale building, we are committed to providing high-quality, cost-effective design services tailored to each client's unique needs.</p>
             </Motion.div>
 
             <Motion.div className="stats" variants={containerVariants}>
@@ -146,7 +146,7 @@ const About = () => {
               transition={{ duration: 0.4 }}
             >
               <img 
-                src="/images/building 6.jpeg" 
+                src="/images/building 6.jpg" 
                 alt="Modern Building Structure"
                 onError={(e) => {
                   e.target.style.display = 'none'

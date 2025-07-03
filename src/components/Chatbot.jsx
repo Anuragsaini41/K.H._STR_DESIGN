@@ -7,7 +7,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hello! Welcome to K.H. STR Design. I'm here to help you with structural engineering solutions. How can I assist you today?",
+      text: "Hello! Welcome to K.H. STR Design Solution. I'm here to help you with structural engineering solutions. How can I assist you today?",
       sender: 'bot',
       timestamp: new Date()
     }
@@ -40,7 +40,7 @@ const Chatbot = () => {
   const responses = {
     greeting: [
       "Hello! How can I help you with your structural engineering needs?",
-      "Hi there! Welcome to K.H. STR Design. What can I do for you today?",
+      "Hi there! Welcome to K.H. STR Design Solution. What can I do for you today?",
       "Greetings! I'm here to assist you with structural design solutions."
     ],
     services: [
@@ -53,7 +53,7 @@ const Chatbot = () => {
       "You can reach us at:\n\n📞 Phone: +91 9991762005\n📧 Email: krishan@khstrdesign.com\n📍 Location: Palwal, Haryana\n\nWould you like to schedule a consultation?"
     ],
     experience: [
-      "K.H. STR Design is a dynamic startup with experienced structural engineers. We combine cutting-edge technology with industry best practices to deliver innovative and safe steel structure solutions."
+      "K.H. STR Design Solution is a dynamic startup with experienced structural engineers. We combine cutting-edge technology with industry best practices to deliver innovative and safe steel structure solutions."
     ],
     timeline: [
       "Project timelines vary based on complexity and scope. Typically:\n\n• Small projects: 1-2 weeks\n• Medium projects: 2-4 weeks\n• Large projects: 4-8 weeks\n\nFor accurate timeline estimation, we'd need to review your specific requirements."
@@ -169,7 +169,7 @@ const Chatbot = () => {
               <Bot size={20} />
             </div>
             <div className="chatbot-header-text">
-              <h3>K.H. STR Design Assistant</h3>
+              <h3>K.H. STR Design Solution Assistant</h3>
               <span className="online-status">
                 <div className="status-dot online"></div>
                 Online

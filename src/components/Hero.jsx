@@ -177,7 +177,7 @@ const Hero = () => {
           >
             
             <div className="stat-item">
-              <span className="stat-number">24/7</span>
+              <span className="stat-number">24*7</span>
               <span className="stat-label">Support Available</span>
             </div>
             <div className="stat-item">

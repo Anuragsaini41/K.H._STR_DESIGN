@@ -13,7 +13,6 @@ import {
   AboutPage, 
   ContactPage,
   StructuralDesignPage,
-  StructuralAnalysisPage,
   DraftingServicesPage,
   SiteSupervisionPage,
   StructuralAuditPage
@@ -29,7 +28,6 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/services/structural-design" element={<StructuralDesignPage />} />
-          <Route path="/services/structural-analysis" element={<StructuralAnalysisPage />} />
           <Route path="/services/drafting-services" element={<DraftingServicesPage />} />
           <Route path="/services/site-supervision" element={<SiteSupervisionPage />} />
           <Route path="/services/structural-audit" element={<StructuralAuditPage />} />

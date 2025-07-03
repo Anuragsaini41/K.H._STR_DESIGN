@@ -18,7 +18,7 @@ const StructuralAuditPage = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="service-hero-bg">
-            <img src="/images/building 5.jpeg" alt="Structural Audit" />
+            <img src="/images/building 5.jpg" alt="Structural Audit" />
             <div className="service-hero-overlay"></div>
           </div>
           <div className="container">
@@ -76,59 +76,7 @@ const StructuralAuditPage = () => {
                   help property owners make informed decisions about structural safety and maintenance requirements.
                 </p>
               </Motion.div>
-
-              <Motion.div 
-                className="service-features"
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h3>What We Offer</h3>
-                <ul>
-                  <li>Visual Structural Inspection</li>
-                  <li>Non-Destructive Testing</li>
-                  <li>Material Strength Assessment</li>
-                  <li>Foundation Evaluation</li>
-                  <li>Crack Analysis</li>
-                  <li>Structural Capacity Assessment</li>
-                  <li>Safety Recommendations</li>
-                  <li>Repair & Strengthening Plans</li>
-                </ul>
-              </Motion.div>
             </div>
-
-            <Motion.div 
-              className="service-process"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h3>Our Process</h3>
-              <div className="process-steps">
-                <div className="process-step">
-                  <div className="step-number">1</div>
-                  <h4>Preliminary Assessment</h4>
-                  <p>Initial survey and documentation review</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">2</div>
-                  <h4>Detailed Inspection</h4>
-                  <p>Comprehensive structural examination</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">3</div>
-                  <h4>Testing & Analysis</h4>
-                  <p>Non-destructive testing and evaluation</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">4</div>
-                  <h4>Report & Recommendations</h4>
-                  <p>Detailed audit report with remedial measures</p>
-                </div>
-              </div>
-            </Motion.div>
 
             <Motion.div 
               className="service-cta"

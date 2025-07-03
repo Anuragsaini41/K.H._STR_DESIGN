@@ -92,43 +92,11 @@ const DraftingServicesPage = () => {
                   <li>As-Built Drawings</li>
                   <li>2D to 3D Conversion</li>
                   <li>AutoCAD Drafting</li>
-                  <li>Revit Modeling</li>
+                  <li>Tekla Modeling</li>
                   <li>Shop Drawings</li>
                 </ul>
               </Motion.div>
             </div>
-
-            <Motion.div 
-              className="service-process"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h3>Our Process</h3>
-              <div className="process-steps">
-                <div className="process-step">
-                  <div className="step-number">1</div>
-                  <h4>Requirement Analysis</h4>
-                  <p>Understanding project scope and specifications</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">2</div>
-                  <h4>Draft Creation</h4>
-                  <p>Creating initial drafts and layouts</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">3</div>
-                  <h4>Review & Revision</h4>
-                  <p>Client review and necessary modifications</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">4</div>
-                  <h4>Final Delivery</h4>
-                  <p>Delivery of complete drawing sets</p>
-                </div>
-              </div>
-            </Motion.div>
 
             <Motion.div 
               className="service-cta"

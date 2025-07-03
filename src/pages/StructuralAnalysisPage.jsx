@@ -99,38 +99,6 @@ const StructuralAnalysisPage = () => {
             </div>
 
             <Motion.div 
-              className="service-process"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h3>Our Process</h3>
-              <div className="process-steps">
-                <div className="process-step">
-                  <div className="step-number">1</div>
-                  <h4>Data Collection</h4>
-                  <p>Gathering structural drawings and material properties</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">2</div>
-                  <h4>Model Development</h4>
-                  <p>Creating accurate 3D structural models</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">3</div>
-                  <h4>Analysis Execution</h4>
-                  <p>Running comprehensive structural analysis</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">4</div>
-                  <h4>Results & Reporting</h4>
-                  <p>Detailed analysis reports with recommendations</p>
-                </div>
-              </div>
-            </Motion.div>
-
-            <Motion.div 
               className="service-cta"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}

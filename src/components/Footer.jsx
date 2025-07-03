@@ -38,7 +38,6 @@ const Footer = () => {
 
   const services = [
     { name: 'Structural Design', href: '/services/structural-design' },
-    { name: 'Structural Analysis', href: '/services/structural-analysis' },
     { name: 'Drafting Services', href: '/services/drafting-services' },
     { name: 'Site Supervision', href: '/services/site-supervision' },
     { name: 'Structural Audit', href: '/services/structural-audit' }
@@ -56,7 +55,7 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="brand-logo">
-              <h3>K.H. STR DESIGN</h3>
+              <h3>K.H. STR Design Solution</h3>
               <div className="brand-tagline">Structural Excellence</div>
             </div>
             <p>Expert structural design solutions for all your construction needs. Building safe and efficient structures with precision and innovation.</p>
@@ -162,8 +161,9 @@ const Footer = () => {
             </div>
 
             <div className="business-hours">
-              <h5>Business Hours</h5>
-              <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+              <h5>Business Support</h5>
+              <p>All 24 / 7</p>
+              
               <p>Sunday: By Appointment</p>
             </div>
           </motion.div>
@@ -177,7 +177,7 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="footer-bottom-content">
-            <p>&copy; 2025 K.H. STR Design. All rights reserved.</p>
+            <p>&copy; 2025 K.H. STR Design Solution. All rights reserved.</p>
             <div className="footer-links">
               <a href="#privacy">Privacy Policy</a>
               <a href="#terms">Terms of Service</a>

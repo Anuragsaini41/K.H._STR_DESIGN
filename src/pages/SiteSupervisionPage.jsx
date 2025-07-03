@@ -88,13 +88,13 @@ const SiteSupervisionPage = () => {
                 <h3>What We Offer</h3>
                 <ul>
                   <li>Quality Control Supervision</li>
-                  <li>Progress Monitoring</li>
+                  
                   <li>Safety Compliance</li>
-                  <li>Material Testing Supervision</li>
+                  
                   <li>Work Method Verification</li>
-                  <li>Regular Progress Reports</li>
+                  
                   <li>Problem Resolution</li>
-                  <li>Final Inspection</li>
+                
                 </ul>
               </Motion.div>
             </div>

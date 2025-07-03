@@ -18,7 +18,7 @@ const StructuralDesignPage = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="service-hero-bg">
-            <img src="/images/building 1.jpeg" alt="Structural Design" />
+            <img src="/images/building 1.jpg" alt="Structural Design" />
             <div className="service-hero-overlay"></div>
           </div>
           <div className="container">
@@ -90,45 +90,13 @@ const StructuralDesignPage = () => {
                   <li>Commercial Structure Design</li>
                   <li>Industrial Facility Design</li>
                   <li>Foundation Design</li>
-                  <li>Seismic Design Analysis</li>
+                  
                   <li>Steel Structure Design</li>
                   <li>RCC Structure Design</li>
-                  <li>Load Calculation & Analysis</li>
+                  
                 </ul>
               </Motion.div>
             </div>
-
-            <Motion.div 
-              className="service-process"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h3>Our Process</h3>
-              <div className="process-steps">
-                <div className="process-step">
-                  <div className="step-number">1</div>
-                  <h4>Initial Consultation</h4>
-                  <p>Understanding project requirements and site conditions</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">2</div>
-                  <h4>Design Development</h4>
-                  <p>Creating preliminary structural concepts and layouts</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">3</div>
-                  <h4>Analysis & Calculation</h4>
-                  <p>Detailed structural analysis using advanced software</p>
-                </div>
-                <div className="process-step">
-                  <div className="step-number">4</div>
-                  <h4>Final Documentation</h4>
-                  <p>Comprehensive drawings and specifications delivery</p>
-                </div>
-              </div>
-            </Motion.div>
 
             <Motion.div 
               className="service-cta"

@@ -1,0 +1,121 @@
+/* Viewport Consistency Fixes */
+
+/* Fix for font scaling differences between localhost and hosted sites */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Ensure consistent viewport behavior */
+@viewport {
+  width: device-width;
+  initial-scale: 1.0;
+  maximum-scale: 1.0;
+  user-scalable: no;
+}
+
+/* Fix for different rendering engines */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Consistent box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Fix for mobile safari zoom issues */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+textarea {
+  font-size: 16px !important;
+  transform: scale(1);
+}
+
+/* Prevent zoom on orientation change */
+@media screen and (orientation: landscape) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+}
+
+/* Fix for high DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* Consistent rem base across all devices */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Fix for webkit zoom */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  html {
+    -webkit-text-size-adjust: none;
+  }
+}
+
+/* Force consistent viewport on all browsers */
+body {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fix for different browser default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-primary);
+}
+
+/* Ensure consistent container behavior */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Fix for different scaling behaviors */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}

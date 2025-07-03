@@ -156,8 +156,9 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              <h4>Business Hours</h4>
-              <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+              <h4>Business Support</h4>
+              <p>All 24 / 7</p>
+              
               <p>Sunday: By Appointment</p>
             </Motion.div>
           </Motion.div>
@@ -244,7 +245,6 @@ const Contact = () => {
                 >
                   <option value="">Select Service</option>
                   <option value="structural-design">Structural Design</option>
-                  <option value="structural-analysis">Structural Analysis</option>
                   <option value="drafting">Drafting Services</option>
                   <option value="supervision">Site Supervision</option>
                   <option value="audit">Structural Audit</option>
@@ -325,7 +325,7 @@ const Contact = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="K.H. STR Design Office Location - Palwal, Haryana"
+              title="K.H. STR Design Solution Office Location - Palwal, Haryana"
             ></iframe>
           </div>
         </Motion.div>

@@ -55,8 +55,8 @@ const Header = () => {
           <Link to="/" className="logo">
             <div className="logo-glow"></div>
             <img 
-              src="/images/services/structural-design.png" 
-              alt="K.H. STR Design Logo"
+              src="/images/logo/logo.png" 
+              alt="K.H. STR Design Solution Logo"
               className="logo-image"
               onError={(e) => {
                 e.target.style.display = 'none'
@@ -81,7 +81,6 @@ const Header = () => {
               </a>
               <div className="dropdown-menu" style={{ left: '0', transform: 'none' }}>
                 <Link to="/services/structural-design" className="dropdown-item">Structural Design</Link>
-                <Link to="/services/structural-analysis" className="dropdown-item">Structural Analysis</Link>
                 <Link to="/services/drafting-services" className="dropdown-item">Drafting Services</Link>
                 <Link to="/services/site-supervision" className="dropdown-item">Site Supervision</Link>
                 <Link to="/services/structural-audit" className="dropdown-item">Structural Audit</Link>
@@ -131,9 +130,6 @@ const Header = () => {
             <span className="mobile-section-title">Services</span>
             <Link to="/services/structural-design" className="mobile-nav-link sub-link" onClick={() => setIsMobileMenuOpen(false)}>
               Structural Design
-            </Link>
-            <Link to="/services/structural-analysis" className="mobile-nav-link sub-link" onClick={() => setIsMobileMenuOpen(false)}>
-              Structural Analysis
             </Link>
             <Link to="/services/drafting-services" className="mobile-nav-link sub-link" onClick={() => setIsMobileMenuOpen(false)}>
               Drafting Services

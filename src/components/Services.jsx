@@ -10,14 +10,8 @@ const Services = () => {
     {
       title: "Structural Design Services",
       description: "Complete structural design solutions for residential, commercial, and industrial buildings using advanced engineering principles and cutting-edge software for safe, efficient, and cost-effective structures.",
-      image: "/images/building 1.jpeg",
+      image: "/images/building 1.jpg",
       route: "/services/structural-design"
-    },
-    {
-      title: "Structural Analysis Services",
-      description: "Comprehensive structural analysis using state-of-the-art software to evaluate load-bearing capacity, stress distribution, and structural behavior under various loading conditions for optimal design solutions.",
-      image: "/images/building 2.jpg",
-      route: "/services/structural-analysis"
     },
     {
       title: "Drafting Services",
@@ -34,7 +28,7 @@ const Services = () => {
     {
       title: "Structural Audit Services",
       description: "Thorough structural health assessment of existing buildings including condition evaluation, safety analysis, repair recommendations, and strengthening solutions to ensure structural integrity and longevity.",
-      image: "/images/building 5.jpeg",
+      image: "/images/building 5.jpg",
       route: "/services/structural-audit"
     }
   ]
@@ -98,7 +92,7 @@ const Services = () => {
           }}
         >
           <h2>OUR SERVICES</h2>
-          <p>Our services at "K.H. Structural Design" encompass a comprehensive range of offerings tailored to meet diverse structural engineering needs. We specialize in delivering exceptional structural design solutions for residential, commercial, and industrial projects.</p>
+          <p>Our services at "K.H. STR Design Solution" encompass a comprehensive range of offerings tailored to meet diverse structural engineering needs. We specialize in delivering exceptional structural design solutions for residential, commercial, and industrial projects.</p>
         </Motion.div>
 
         <Motion.div 
@@ -108,8 +102,7 @@ const Services = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {/* First row - 3 items */}
-          {services.slice(0, 3).map((service, index) => (
+          {services.map((service, index) => (
             <Motion.div 
               key={index} 
               className="service-item reference-item"
@@ -146,47 +139,6 @@ const Services = () => {
               </div>
             </Motion.div>
           ))}
-          
-          {/* Second row - 2 items centered */}
-          <div className="bottom-row-container">
-            {services.slice(3).map((service, index) => (
-              <Motion.div 
-                key={index + 3} 
-                className="service-item reference-item"
-                variants={itemVariants}
-                onClick={() => handleServiceClick(service.route)}
-                style={{ cursor: 'pointer' }}
-                whileHover={{ 
-                  y: -8, 
-                  scale: 1.02,
-                  transition: { 
-                    duration: 0.4, 
-                    ease: "easeOut",
-                    type: "spring",
-                    stiffness: 300,
-                    damping: 20
-                  }
-                }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <div className="service-image-circle">
-                  <img 
-                    src={service.image} 
-                    alt={service.title}
-                    onError={(e) => {
-                      e.target.style.display = 'none'
-                    }}
-                  />
-                </div>
-                
-                <div className="service-content">
-                  <div className="service-number">{index + 4}.</div>
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </div>
-              </Motion.div>
-            ))}
-          </div>
         </Motion.div>
       </div>
     </section>

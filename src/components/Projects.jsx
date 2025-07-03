@@ -113,7 +113,7 @@ const Projects = () => {
               >
                 <h3>Our Project Vision</h3>
                 <p>
-                  As a newly established start-up, KH is in the early stages of building our project portfolio. 
+                  As a newly established start-up, K.H. STR Design Solution is in the early stages of building our project portfolio. 
                   While we do not have completed projects to showcase at this time, our team brings valuable 
                   experience from previous work in the structural steel design industry.
                 </p>

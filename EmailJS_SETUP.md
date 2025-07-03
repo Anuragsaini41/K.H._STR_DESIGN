@@ -17,7 +17,7 @@
 1. Go to "Email Templates" tab
 2. Click "Create New Template"
 3. Design your email template:
-   - Add a subject (e.g., "New Contact Form Submission from KH STR DESIGN")
+   - Add a subject (e.g., "New Contact Form Submission from K.H. STR Design Solution")
    - Create the body of the email including variables like {{from_name}}, {{from_email}}, etc.
    - Sample template:
    ```

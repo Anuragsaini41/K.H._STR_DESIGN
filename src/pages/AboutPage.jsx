@@ -99,7 +99,7 @@ const AboutPage = () => {
               <Sparkles size={16} />
               <span>Structural Engineering Excellence</span>
             </div>
-          <h1>About <span className="highlight">K.H. STR Design</span></h1>
+          <h1>About <span className="highlight">K.H. STR Design Solution</span></h1>
           <p>Innovative Start-up Bringing Fresh Perspectives to Structural Steel Design with Innovation, Precision, and Modern Approaches</p>
           </div>
         </div>
@@ -108,10 +108,10 @@ const AboutPage = () => {
       {/* About Us Section */}
       <section className="about-us-section">
         <div className="container">
-          <h2>About K.H. STR Design</h2>
+          <h2>About K.H. STR Design Solution</h2>
           <div className="about-content">
             <p>
-              K.H. STR Design is an emerging structural engineering consultancy firm dedicated to 
+              K.H. STR Design Solution is an emerging structural engineering consultancy firm dedicated to 
               providing innovative and reliable structural solutions. Founded with a passion for 
               excellence in structural engineering, we aim to become a trusted partner for clients 
               seeking fresh perspectives in structural design and engineering services.
@@ -131,7 +131,7 @@ const AboutPage = () => {
             </div>
             <h2>Our Journey Has Just Begun</h2>
             <p>
-              As a newly established structural engineering startup, K.H. STR Design represents 
+              As a newly established structural engineering startup, K.H. STR Design Solution represents 
               the beginning of an exciting journey in the field of structural engineering. 
               What we may lack in years of operation, we make up for with fresh perspectives, 
               up-to-date technical knowledge, and an unwavering commitment to innovation.
@@ -162,7 +162,7 @@ const AboutPage = () => {
         <div className="container">
           <h2>Our Mission</h2>
           <p>
-            At K.H. STR Design, our mission is to bring fresh perspectives to structural engineering
+            At K.H. STR Design Solution, our mission is to bring fresh perspectives to structural engineering
             solutions that ensure safety, functionality, and aesthetic appeal. We are committed 
             to using innovative design approaches and modern technology to create structures 
             that are built to last while meeting the unique requirements of each project.
@@ -212,7 +212,7 @@ const AboutPage = () => {
             <div className="philosophy-text">
               <h2>Our Philosophy</h2>
               <p>
-                At K.H. STR Design, we believe in building strong relationships with our clients 
+                At K.H. STR Design Solution, we believe in building strong relationships with our clients 
                 through transparency, reliability, and excellence. Our approach is centered on 
                 understanding each client's unique vision and translating it into safe, efficient, 
                 and cost-effective structural solutions. As a new startup, we bring fresh ideas and 
@@ -229,7 +229,7 @@ const AboutPage = () => {
       {/* Contact Section */}
       <section className="contact-section">
         <div className="container">
-          <h2>Connect with K.H. STR Design</h2>
+          <h2>Connect with K.H. STR Design Solution</h2>
           <div className="contact-grid">
             <div className="contact-card">
               <Phone className="contact-icon" />
@@ -261,7 +261,7 @@ const AboutPage = () => {
       {/* CTA Section */}
       <section className="cta-section">
         <div className="container">
-          <h2>Start Your Journey with K.H. STR Design</h2>
+          <h2>Start Your Journey with K.H. STR Design Solution</h2>
           <p className="cta-subtitle">Get in touch for a consultation on your structural engineering needs</p>
           <button className="cta-button">Schedule a Consultation</button>
         </div>
