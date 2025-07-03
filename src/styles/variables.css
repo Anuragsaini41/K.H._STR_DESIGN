@@ -1,0 +1,37 @@
+/* CSS Variables - Global Design System */
+:root {
+  /* Colors - Red & Blue Theme */
+  --primary-color: #dc2626; /* Red from logo */
+  --primary-dark: #b91c1c;
+  --primary-light: #f87171;
+  --secondary-color: #2563eb; /* Blue from logo */
+  --secondary-dark: #1d4ed8;
+  --secondary-light: #60a5fa;
+  --accent-color: #dc2626;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-light: #9ca3af;
+  --text-dark: #111827;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+  
+  /* Spacing */
+  --container-padding: 1.5rem;
+  --section-padding: 4rem 0; /* Optimized for laptop screens */
+  --border-radius: 0.75rem;
+  --border-radius-lg: 1rem;
+  
+  /* Transitions */
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}

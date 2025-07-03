@@ -1,0 +1,70 @@
+// Update your hero section for each service page to match this template:
+
+<motion.section 
+  className="service-hero"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="service-hero-bg">
+    <img src="/images/YOUR_SERVICE_IMAGE.jpg" alt="SERVICE_NAME" />
+    <div className="service-hero-overlay"></div>
+  </div>
+  <div className="container">
+    <motion.div 
+      className="service-hero-content"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+    >
+      <div className="service-hero-badge">
+        {/* Add icon related to your service */}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Add appropriate SVG path here -->
+        </svg>
+        Service Category Badge Text
+      </div>
+      <h1>Service Name <span className="highlight">With Highlight</span></h1>
+      <p>Your service description text goes here. Make it compelling and descriptive.</p>
+      <motion.button 
+        className="btn-primary"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        {/* Add icon related to CTA */}
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Add appropriate SVG path here -->
+        </svg>
+        Call To Action Text
+      </motion.button>
+    </motion.div>
+  </div>
+</motion.section>
+
+<!-- Common icons you can use:
+
+1. Quote/Document icon:
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M19.4 20H4.6C4.26863 20 4 19.7314 4 19.4V4.6C4 4.26863 4.26863 4 4.6 4H15.4C15.5657 4 15.7248 4.06321 15.84 4.176L19.824 8.16C19.9368 8.27525 20 8.43427 20 8.6V19.4C20 19.7314 19.7314 20 19.4 20Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M8 12H16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M8 16H16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M16 4V8.4C16 8.73137 16.2686 9 16.6 9H20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+2. Building/Design icon:
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 22H22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M17 22V6C17 4.89543 16.1046 4 15 4H9C7.89543 4 7 4.89543 7 6V22" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M17 14H22V22H17V14Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M2 14H7V22H2V14Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M11 22V18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M11 14V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+3. Analysis/Chart icon:
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M21 21H4.6C4.26863 21 4 20.7314 4 20.4V3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  <path d="M20 8L16 12L12 8L8 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+-->

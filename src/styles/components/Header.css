@@ -1,0 +1,791 @@
+/* Modern Header - Fixed */
+.header, .modern-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.95), rgba(185, 28, 28, 0.95));
+  transition: var(--transition-base);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  overflow: visible !important;
+}
+
+.modern-header.scrolled, .header.scrolled {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.98), rgba(185, 28, 28, 0.98));
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Header Top Bar - Fixed */
+.header-top {
+  background: var(--text-primary);
+  color: white;
+  padding: 0.4rem 0;
+  font-size: 13px;
+}
+
+.header-top .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible !important;
+}
+
+.header-contact-info {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.header-top .header-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  background: transparent !important;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition-base);
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.header-top .header-contact-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-1px);
+}
+
+.header-top .header-contact-item:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.header-top .header-contact-item span {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Header Contact Icons - Complete Fix */
+.header-top svg,
+.header-top .header-contact-icon,
+.header-contact-item svg,
+.header-contact-info svg,
+svg.header-contact-icon {
+  color: #dc2626 !important;
+  fill: #dc2626 !important;
+  stroke: #dc2626 !important;
+  width: 13px !important;
+  height: 13px !important;
+  transition: transform 0.3s ease;
+}
+
+.header-contact-item:hover svg {
+  transform: scale(1.2);
+}
+
+/* React Icons specific targeting for header */
+.header-top [class*="fa-"],
+.header-contact-info [class*="fa-"],
+.header-contact-item [class*="fa-"] {
+  color: #dc2626 !important;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #25D366;
+  color: white;
+  padding: 0.25rem 0.8rem;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn svg {
+  font-size: 16px;
+}
+
+/* Main Navigation - Fixed */
+.navbar {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 0.7rem 0;
+  box-shadow: none;
+  border-bottom: none;
+  position: relative;
+  /* Make sure we don't have any overflow constraints that would clip the dropdown */
+  overflow: visible !important;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  position: relative;
+  z-index: 5;
+  overflow: visible !important;
+}
+
+.logo {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(0);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.logo:hover {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.5),
+    0 0 0 2px rgba(255, 255, 255, 0.6),
+    inset 0 0 25px rgba(255, 255, 255, 0.5);
+  transform: translateY(-5px);
+}
+
+.logo-image {
+  height: 48px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) 
+         drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5))
+         contrast(1.15) 
+         brightness(1.05)
+         saturate(1.1);
+  z-index: 3;
+  border-radius: 8px;
+  padding: 5px 10px;
+  animation: pulse 2s infinite alternate ease-in-out;
+}
+
+.scrolled .logo-image {
+  height: 42px;
+}
+
+@keyframes pulse {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) 
+           drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5))
+           contrast(1.15) 
+           brightness(1.05)
+           saturate(1.1);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1)) 
+           drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6))
+           contrast(1.2) 
+           brightness(1.1)
+           saturate(1.15);
+  }
+}
+
+.logo-fallback {
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 
+    0 0 10px rgba(0, 0, 0, 0.8), 
+    0 0 15px rgba(255, 255, 255, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.5px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1e293b, #334155);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.3),
+    inset 0 0 15px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-text h2 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo-text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.75rem;
+  margin: 0;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0;
+  overflow: visible !important;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition-base);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-toggle {
+  padding-right: 1.75rem;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.dropdown {
+  position: relative;
+  z-index: 1010;
+}
+
+/* Simplified dropdown implementation */
+
+/* Fix for dropdown positioning */
+.nav-item.dropdown {
+  position: relative;
+  display: inline-block;
+  overflow: visible !important;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background-color: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 2000;
+  display: none;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.3s forwards;
+  backdrop-filter: blur(10px);
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid rgba(15, 23, 42, 0.95);
+  z-index: 2001;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced dropdown styling - Removed duplicate */
+
+/* Improved hover effect */
+.dropdown-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: white;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.dropdown-toggle:hover::after {
+  width: 80%;
+}
+
+/* Hide dropdown on mobile */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    display: none !important;
+  }
+}
+
+/* Removed duplicate animation keyframes */
+
+/* Dropdown arrow rotation on hover */
+.dropdown:hover .dropdown-toggle svg {
+  transform: rotate(180deg);
+  color: white;
+}
+
+.dropdown-toggle svg {
+  position: relative;
+  top: 1px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-cta {
+  margin-left: 1rem;
+}
+
+.nav-cta .connect-now {
+  background: #e11d48; /* Vibrant red like sample website */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 0.95rem;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-cta .connect-now:hover {
+  background: #f43f5e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(225, 29, 72, 0.4);
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-menu-content {
+  padding: 1rem;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-base);
+  font-weight: 500;
+}
+
+.mobile-nav-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 1.5rem;
+}
+
+.mobile-cta {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.mobile-cta:active {
+  transform: translateY(2px);
+}
+
+/* Mobile Services Section */
+.mobile-services-section {
+  border-left: 3px solid rgba(220, 38, 38, 0.6);
+  margin-left: 1rem;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.mobile-section-title {
+  display: block;
+  padding: 0.75rem 1rem 0.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.mobile-nav-link.sub-link {
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem 0.75rem 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav-link.sub-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-link.sub-link::before {
+  content: '→';
+  position: absolute;
+  left: 1rem;
+  color: rgba(220, 38, 38, 0.8);
+  font-size: 0.8rem;
+}
+
+.mobile-nav-link.sub-link:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 2.5rem;
+}
+
+/* Basic dropdown functionality */
+
+/* Removed duplicate dropdown-menu styles as they're defined above */
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header-top {
+    padding: 0.3rem 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-top .container {
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    overflow: visible !important;
+  }
+  
+  .header-contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .header-contact-item span {
+    font-size: 11px;
+  }
+  
+  .desktop-menu {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+  
+  .nav-cta {
+    display: none;
+  }
+  
+  .navbar .container {
+    min-height: 55px;
+  }
+  
+  .logo {
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
+  
+  .logo-image {
+    height: 42px;
+    padding: 3px 8px;
+  }
+  
+  .scrolled .logo-image {
+    height: 38px;
+  }
+  
+  .logo-glow {
+    opacity: 0.6;
+  }
+  
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1100;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+  }
+  
+  .whatsapp-btn span {
+    display: none;
+  }
+  
+  .whatsapp-btn svg {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .mobile-whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #25D366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);
+    width: 100%;
+  }
+
+  .mobile-whatsapp-btn:hover {
+    background-color: #128C7E;
+  }
+
+  .mobile-whatsapp-btn svg {
+    font-size: 18px;
+  }
+}
+
+/* Laptop Screen Optimizations */
+@media (min-width: 769px) and (max-width: 1600px) {
+  .header-top {
+    padding: 0.4rem 0;
+    font-size: 13px;
+  }
+  
+  .navbar .container {
+    min-height: 55px;
+  }
+  
+  .logo-image {
+    height: 42px;
+    max-width: 150px;
+  }
+  
+  .nav-link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .header-contact-info {
+    gap: 1.5rem;
+  }
+  
+  .header-contact-item {
+    gap: 0.4rem;
+  }
+  
+  .header-contact-item span {
+    font-size: 0.85rem;
+  }
+}
+
+/* Logo Glow Effect */
+.logo-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), transparent 70%);
+  border-radius: 15px;
+  opacity: 0.5;
+  filter: blur(15px);
+  z-index: 2;
+  animation: glowing 3s infinite alternate ease-in-out;
+}
+
+@keyframes glowing {
+  0% {
+    opacity: 0.3;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 0.7;
+    filter: blur(20px);
+  }
+}
+
+/* Extra animation for logo hover */
+.logo:hover .logo-image {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1)) 
+         drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6))
+         contrast(1.2) 
+         brightness(1.1)
+         saturate(1.2);
+}
+
+.logo:hover .logo-glow {
+  animation: fastGlow 1s infinite alternate ease-in-out;
+  opacity: 0.8;
+}
+
+@keyframes fastGlow {
+  0% {
+    opacity: 0.5;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 0.9;
+    filter: blur(25px);
+  }
+}
+
+/* Dropdown hover effect - consolidated with styles above */
+
+/* Final fixes for dropdown menu */
+.header, .modern-header {
+  overflow: visible !important;
+}
+
+.navbar {
+  overflow: visible !important;
+}
+
+.navbar .container {
+  overflow: visible !important;
+}
+
+.desktop-menu {
+  overflow: visible !important;
+}
+
+.nav-item.dropdown {
+  overflow: visible !important;
+}
