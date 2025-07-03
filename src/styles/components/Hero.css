@@ -8,7 +8,7 @@
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2d3748 100%);
-  padding-top: 190px; /* Increased to prevent header overlap */
+  padding-top: 180px; /* Increased to prevent header overlap */
 }
 
 .hero::before {
@@ -568,7 +568,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 300px; /* For very small screens */
+    padding-top: 200px; /* For very small screens */
     min-height: 70vh;
   }
   
