@@ -568,7 +568,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding-top: 200px; /* For very small screens */
+    padding-top: 300px; /* For very small screens */
     min-height: 70vh;
   }
   
