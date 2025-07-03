@@ -592,7 +592,7 @@ svg.header-contact-icon {
 /* Responsive Header */
 @media (max-width: 768px) {
   .header-top {
-    padding: 0.3rem 0;
+    padding: 0.25rem 0;
     display: flex;
     align-items: center;
   }
@@ -600,18 +600,19 @@ svg.header-contact-icon {
   .header-top .container {
     justify-content: center;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     overflow: visible !important;
   }
   
   .header-contact-info {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
+    flex-wrap: wrap;
   }
   
   .header-contact-item span {
-    font-size: 11px;
+    font-size: 10px;
   }
   
   .desktop-menu {
@@ -631,21 +632,21 @@ svg.header-contact-icon {
   }
   
   .navbar .container {
-    min-height: 55px;
+    min-height: 50px;
   }
   
   .logo {
     padding: 2px 4px;
-    border-radius: 15px;
+    border-radius: 12px;
   }
   
   .logo-image {
-    height: 58px;
+    height: 50px;
     padding: 2px 5px;
   }
   
   .scrolled .logo-image {
-    height: 50px;
+    height: 45px;
   }
   
   .logo-glow {
@@ -662,7 +663,7 @@ svg.header-contact-icon {
   }
   
   .whatsapp-btn svg {
-    font-size: 24px;
+    font-size: 22px;
     margin: 0;
   }
   
@@ -673,19 +674,19 @@ svg.header-contact-icon {
     gap: 0.5rem;
     background-color: #25D366;
     color: white;
-    padding: 0.75rem 1rem;
+    padding: 0.7rem 1rem;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    margin-top: 0.75rem; /* Reduced margin to be closer to CONNECT NOW button */
-    margin-bottom: 1rem; /* Added bottom margin for better visibility */
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    position: relative; /* Added position */
+    position: relative;
   }
 
   .mobile-whatsapp-btn:hover {
@@ -718,7 +719,178 @@ svg.header-contact-icon {
   }
 
   .mobile-whatsapp-btn svg {
-    font-size: 18px;
+    font-size: 16px;
+  }
+}
+
+/* iPhone SE and small mobile devices */
+@media (max-width: 375px) {
+  .header-top {
+    padding: 0.2rem 0;
+  }
+  
+  .header-top .container {
+    gap: 4px;
+  }
+  
+  .header-contact-info {
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .header-contact-item {
+    padding: 0.15rem 0.3rem;
+  }
+  
+  .header-contact-item span {
+    font-size: 9px;
+  }
+  
+  .header-top svg,
+  .header-contact-icon {
+    width: 11px !important;
+    height: 11px !important;
+  }
+  
+  .whatsapp-btn {
+    padding: 0.2rem 0.6rem;
+    font-size: 11px;
+  }
+  
+  .navbar {
+    padding: 0.5rem 0;
+  }
+  
+  .navbar .container {
+    min-height: 45px;
+    padding: 0 0.75rem;
+  }
+  
+  .logo {
+    padding: 1px 3px;
+    border-radius: 10px;
+  }
+  
+  .logo-image {
+    height: 45px;
+    padding: 1px 3px;
+  }
+  
+  .scrolled .logo-image {
+    height: 40px;
+  }
+  
+  .mobile-menu-toggle {
+    padding: 0.4rem;
+  }
+  
+  .mobile-menu-toggle svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .mobile-menu-content {
+    padding: 0.75rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .mobile-nav-link {
+    padding: 0.7rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-section-title {
+    padding: 0.6rem 0.75rem 0.4rem;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-nav-link.sub-link {
+    padding: 0.55rem 0.75rem 0.55rem 1.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .mobile-cta {
+    margin-top: 1.25rem;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .mobile-whatsapp-btn {
+    padding: 0.65rem 0.9rem;
+    font-size: 12px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .mobile-whatsapp-btn svg {
+    font-size: 15px;
+  }
+}
+
+/* Very small devices (iPhone SE and below) */
+@media (max-width: 320px) {
+  .header-top {
+    padding: 0.15rem 0;
+  }
+  
+  .header-contact-info {
+    gap: 6px;
+  }
+  
+  .header-contact-item span {
+    font-size: 8px;
+  }
+  
+  .header-top svg,
+  .header-contact-icon {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  .navbar .container {
+    min-height: 40px;
+    padding: 0 0.5rem;
+  }
+  
+  .logo {
+    padding: 1px 2px;
+  }
+  
+  .logo-image {
+    height: 40px;
+    padding: 1px 2px;
+  }
+  
+  .scrolled .logo-image {
+    height: 35px;
+  }
+  
+  .mobile-menu-toggle {
+    padding: 0.3rem;
+  }
+  
+  .mobile-menu-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .mobile-nav-link {
+    padding: 0.6rem 0.6rem;
+    font-size: 0.85rem;
+  }
+  
+  .mobile-cta {
+    padding: 0.7rem;
+    font-size: 0.75rem;
+  }
+  
+  .mobile-whatsapp-btn {
+    padding: 0.6rem 0.8rem;
+    font-size: 11px;
+  }
+  
+  .mobile-whatsapp-btn svg {
+    font-size: 14px;
   }
 }
 

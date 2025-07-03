@@ -115,7 +115,7 @@ const DraftingServicesPage = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      
     </div>
   )
 }
