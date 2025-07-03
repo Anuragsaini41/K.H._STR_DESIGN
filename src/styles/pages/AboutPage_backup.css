@@ -1,0 +1,1912 @@
+/* About Page Styles */
+.about-page {
+  min-height: 100vh;
+  padding-top: 120px; /* Increased to prevent header overlap */
+}
+
+/* Override global container for about page */
+.about-page .container {
+  max-width: 1400px !important;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Reduced padding for more compact layout */
+}
+
+/* Hero Section */
+.about-hero {
+  background-image: 
+    linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
+    url('/images/about/team-photo.jpg');
+  color: white;
+  padding: 60px 0 80px; /* Increased padding for better visual impact */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh; /* Standardized hero height for consistency across pages */
+  animation: gradualZoom 15s ease-in-out alternate infinite;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Better parallax effect */
+  transition: background-size 10s ease;
+  margin-top: 0; /* Ensure no additional margin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add floating particles */
+.about-hero .hero-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.about-hero .particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, #dc2626, #2563eb);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.6), 0 0 20px rgba(37, 99, 235, 0.4);
+  opacity: 0.7;
+  animation: floatParticles 8s ease-in-out infinite;
+}
+
+.about-hero .particle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+.about-hero .particle:nth-child(2) { left: 20%; top: 60%; animation-delay: 1s; }
+.about-hero .particle:nth-child(3) { left: 70%; top: 30%; animation-delay: 2s; }
+.about-hero .particle:nth-child(4) { left: 80%; top: 70%; animation-delay: 3s; }
+.about-hero .particle:nth-child(5) { left: 50%; top: 10%; animation-delay: 4s; }
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
+              linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.9) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-hero::after {
+  content: '';
+  position: absolute;
+  top: -25%;
+  right: -15%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(180deg); }
+}
+
+/* Add floating particles animation */
+@keyframes floatParticles {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% { 
+    transform: translateY(-40px) translateX(20px) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 3;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero .hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Add hero badge similar to main hero */
+.about-hero .hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-hero .hero-badge:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(220, 38, 38, 0.3);
+  transform: translateY(-2px);
+}
+
+.about-hero .hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem); /* Responsive font size like main hero */
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-align: center;
+  width: 100%;
+}
+
+/* Add highlight effect to title */
+.about-hero .hero-content h1 .highlight {
+  background: linear-gradient(135deg, #dc2626 0%, #f59e0b 25%, #dc2626 50%, #2563eb 75%, #dc2626 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  font-weight: 900;
+  display: inline-block;
+  animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.about-hero .hero-content p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Responsive font size */
+  opacity: 0.9;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* About Us Section */
+.about-page .about-us-section {
+  padding: 60px 0; /* Reduced from 80px for compact layout */
+  background: #ffffff;
+  position: relative;
+}
+
+.about-page .about-us-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 90%, rgba(220, 38, 38, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.about-page .about-us-section h2 {
+  text-align: center;
+  font-size: 2.3rem; /* Reduced from 2.8rem for compact layout */
+  margin-bottom: 2rem; /* Reduced from 3rem */
+  color: #1e293b;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .about-us-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #dc2626;
+  border-radius: 2px;
+}
+
+.about-page .about-content {
+  max-width: 900px;
+  margin: 0 auto 1.5rem; /* Reduced margin to bring startup message closer */
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .about-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: #475569;
+  font-weight: 400;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .about-us-section {
+    padding: 40px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .about-page .about-us-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-page .about-content p {
+    font-size: 1rem; /* Smaller text for iPhone SE */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Features Grid */
+.about-page .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Reduced min-width from 320px */
+  gap: 1.5rem; /* Reduced from 2rem for compact layout */
+  margin-top: 2rem; /* Reduced from 3rem */
+  position: relative;
+  z-index: 2;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .features-grid {
+    grid-template-columns: 1fr; /* Single column on iPhone SE */
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.about-page .feature-card {
+  background: #ffffff;
+  padding: 2rem; /* Reduced from 2.5rem for compact layout */
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .feature-card {
+    padding: 1.5rem; /* Reduced padding for iPhone SE */
+    border-radius: 12px;
+  }
+}
+
+.about-page .feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #dc2626;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.about-page .feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.about-page .feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #dc2626;
+}
+
+.about-page .feature-icon {
+  width: 60px; /* Reduced from 70px for compact layout */
+  height: 60px; /* Reduced from 70px */
+  background: #dc2626;
+  color: white;
+  margin: 0 auto 1.2rem; /* Reduced from 1.5rem */
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .feature-icon {
+    width: 50px; /* Smaller icons for iPhone SE */
+    height: 50px;
+    margin: 0 auto 1rem;
+    border-radius: 12px;
+  }
+}
+
+.about-page .feature-card:hover .feature-icon {
+  transform: scale(1.05);
+  background: #b91c1c;
+}
+
+.about-page .feature-card h3 {
+  font-size: 1.2rem; /* Reduced from 1.3rem for compact layout */
+  margin-bottom: 0.8rem; /* Reduced from 1rem */
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.about-page .feature-card p {
+  color: #64748b;
+  line-height: 1.5; /* Reduced from 1.6 for compact layout */
+  font-weight: 400;
+  font-size: 0.9rem; /* Slightly reduced for compact layout */
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .feature-card h3 {
+    font-size: 1.1rem; /* Smaller headings for iPhone SE */
+    margin-bottom: 0.6rem;
+  }
+  
+  .about-page .feature-card p {
+    font-size: 0.85rem; /* Smaller text for iPhone SE */
+    line-height: 1.4;
+  }
+}
+
+/* Mission Section */
+.about-page .mission-section {
+  padding: 70px 0; /* Reduced from 100px for compact layout */
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .mission-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatReverse 12s ease-in-out infinite;
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(30px) rotate(-180deg); }
+}
+
+.about-page .mission-section h2 {
+  text-align: center;
+  font-size: 2.3rem; /* Reduced from 2.8rem for compact layout */
+  margin-bottom: 1.5rem; /* Reduced from 2rem */
+  color: #1e293b;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .mission-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+.about-page .mission-section > .container > p {
+  max-width: 800px;
+  margin: 0 auto 2.5rem; /* Reduced from 4rem for compact layout */
+  text-align: center;
+  font-size: 1.1rem; /* Reduced from 1.2rem for compact layout */
+  line-height: 1.7; /* Reduced from 1.8 for compact layout */
+  color: #475569;
+  font-weight: 400;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .mission-section {
+    padding: 40px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .about-page .mission-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1rem;
+  }
+  
+  .about-page .mission-section > .container > p {
+    font-size: 1rem; /* Smaller text for iPhone SE */
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Stats Grid */
+.about-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Reduced min-width from 220px */
+  gap: 1.5rem; /* Reduced from 2rem for compact layout */
+  margin-top: 2rem; /* Reduced from 3rem */
+  position: relative;
+  z-index: 2;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .stats-grid {
+    grid-template-columns: 1fr; /* Single column on iPhone SE */
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.about-page .stat-card {
+  text-align: center;
+  padding: 2.2rem 1.5rem; /* Reduced padding: 3rem 2rem -> 2.2rem 1.5rem */
+  background: #ffffff;
+  color: #1e293b;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .stat-card {
+    padding: 1.8rem 1.2rem; /* Reduced padding for iPhone SE */
+    border-radius: 12px;
+  }
+}
+
+.about-page .stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #dc2626, #2563eb);
+  opacity: 1;
+}
+
+.about-page .stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -1px rgba(0, 0, 0, 0.04);
+  border-color: #dc2626;
+}
+
+.about-page .stat-card h3 {
+  font-size: 3rem; /* Reduced from 3.5rem for compact layout */
+  font-weight: 800;
+  margin-bottom: 0.4rem; /* Reduced from 0.5rem */
+  position: relative;
+  z-index: 2;
+  color: #dc2626;
+}
+
+.about-page .stat-card p {
+  font-size: 1rem; /* Reduced from 1.1rem for compact layout */
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #64748b;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .stat-card h3 {
+    font-size: 2.5rem; /* Smaller numbers for iPhone SE */
+    margin-bottom: 0.3rem;
+  }
+  
+  .about-page .stat-card p {
+    font-size: 0.9rem; /* Smaller text for iPhone SE */
+    letter-spacing: 0.3px;
+  }
+}
+
+/* Core Services Section */
+.about-page .core-services-section {
+  padding: 70px 0; /* Reduced from 100px for compact layout */
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .core-services-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 12s ease-in-out infinite;
+}
+
+.about-page .core-services-section h2 {
+  text-align: center;
+  font-size: 2.3rem; /* Reduced from 2.8rem for compact layout */
+  margin-bottom: 0.8rem; /* Reduced from 1rem */
+  color: #1e293b;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.about-page .core-services-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #dc2626;
+  border-radius: 2px;
+}
+
+.about-page .core-services-section > .container > p {
+  text-align: center;
+  font-size: 1.1rem; /* Reduced from 1.2rem for compact layout */
+  color: #475569;
+  margin-bottom: 2rem; /* Reduced from 3rem */
+  position: relative;
+  z-index: 2;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .core-services-section {
+    padding: 50px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .about-page .core-services-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 0.6rem;
+  }
+  
+  .about-page .core-services-section > .container > p {
+    font-size: 1rem; /* Smaller text for iPhone SE */
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+.services-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  mask: linear-gradient(
+    to right,
+    transparent 0%,
+    white 10%,
+    white 90%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent 0%,
+    white 10%,
+    white 90%,
+    transparent 100%
+  );
+}
+
+.about-page .services-grid {
+  display: flex;
+  gap: 1.5rem; /* Reduced from 2rem for compact layout */
+  position: relative;
+  z-index: 2;
+  animation: scrollHorizontal 25s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scrollHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.services-scroll-container:hover .services-grid {
+  animation-play-state: paused;
+}
+
+/* For screens with 3 columns */
+@media (min-width: 1200px) {
+  .about-page .services-grid {
+    gap: 2rem; /* Reduced from 2.5rem */
+  }
+}
+
+/* For medium screens - 2 columns */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .about-page .services-grid {
+    gap: 1.5rem; /* Reduced from 2rem */
+  }
+}
+
+/* For mobile screens - 1 column */
+@media (max-width: 767px) {
+  .about-page .services-grid {
+    gap: 1.2rem; /* Reduced from 1.5rem */
+  }
+  
+  .about-page .service-card {
+    width: 260px; /* Reduced from 280px for more compact mobile layout */
+    min-width: 260px;
+  }
+  
+  .services-scroll-container {
+    mask: linear-gradient(
+      to right,
+      transparent 0%,
+      white 5%,
+      white 95%,
+      transparent 100%
+    );
+    -webkit-mask: linear-gradient(
+      to right,
+      transparent 0%,
+      white 5%,
+      white 95%,
+      transparent 100%
+    );
+  }
+}
+
+/* Ultra-small screens optimization */
+@media (max-width: 360px) {
+  .about-page {
+    padding-top: 95px;
+  }
+  
+  .about-hero {
+    min-height: 40vh;
+    padding: 30px 0 40px;
+  }
+  
+  .about-hero .hero-content {
+    padding: 1rem;
+    margin: 0 0.25rem;
+  }
+  
+  .about-hero .hero-content h1 {
+    font-size: clamp(1.4rem, 8vw, 2rem);
+    line-height: 1.1;
+  }
+  
+  .about-hero .hero-content p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .about-page .container {
+    padding: 0 0.75rem;
+  }
+  
+  .startup-message-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .about-page .feature-card,
+  .about-page .stat-card {
+    padding: 1rem 0.75rem;
+  }
+}
+
+.about-page .service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px; /* Reduced from 350px for compact layout */
+  min-width: 320px;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 380px; /* Reduced from 400px */
+  min-height: 340px; /* Reduced from 380px for compact layout */
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .service-card {
+    width: 280px; /* Smaller cards for iPhone SE */
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 300px;
+    border-radius: 12px;
+  }
+}
+
+.about-page .service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #2563eb;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.about-page .service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.about-page .service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #2563eb;
+}
+
+.about-page .service-image {
+  height: 160px; /* Reduced from 180px for compact layout */
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .service-image {
+    height: 140px; /* Smaller image height for iPhone SE */
+  }
+}
+
+.about-page .service-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.05), rgba(37, 99, 235, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.about-page .service-card:hover .service-image::before {
+  opacity: 1;
+}
+
+.about-page .service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-page .service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.about-page .service-content {
+  padding: 1.5rem; /* Reduced from 2rem for compact layout */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-page .service-content h3 {
+  font-size: 1.2rem; /* Reduced from 1.25rem for compact layout */
+  margin-bottom: 0.6rem; /* Reduced from 0.75rem */
+  color: #1e293b;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.about-page .service-content p {
+  color: #64748b;
+  line-height: 1.5; /* Reduced from 1.6 for compact layout */
+  font-weight: 400;
+  font-size: 0.9rem; /* Reduced from 0.95rem */
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .about-page .service-content {
+    padding: 1.2rem; /* Smaller padding for iPhone SE */
+  }
+  
+  .about-page .service-content h3 {
+    font-size: 1.1rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-page .service-content p {
+    font-size: 0.85rem; /* Smaller text for iPhone SE */
+    line-height: 1.4;
+  }
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  padding: 70px 0; /* Reduced from 100px for compact layout */
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-section::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatReverse 15s ease-in-out infinite;
+}
+
+.philosophy-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem; /* Reduced from 5rem for compact layout */
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .philosophy-section {
+    padding: 50px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .philosophy-content {
+    grid-template-columns: 1fr; /* Single column on iPhone SE */
+    gap: 2rem;
+  }
+}
+
+.philosophy-text h2 {
+  font-size: 2.3rem; /* Reduced from 2.8rem for compact layout */
+  margin-bottom: 1.5rem; /* Reduced from 2rem */
+  color: #1e293b;
+  font-weight: 700;
+  position: relative;
+}
+
+.philosophy-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+.philosophy-text p {
+  font-size: 1.1rem; /* Reduced from 1.2rem for compact layout */
+  line-height: 1.7; /* Reduced from 1.8 for compact layout */
+  color: #475569;
+  font-weight: 400;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .philosophy-text h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .philosophy-text h2::after {
+    left: 50%; /* Center the line on iPhone SE */
+    transform: translateX(-50%);
+  }
+  
+  .philosophy-text p {
+    font-size: 1rem; /* Smaller text for iPhone SE */
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+.philosophy-image {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.philosophy-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.philosophy-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.05), rgba(37, 99, 235, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.philosophy-image:hover::before {
+  opacity: 1;
+}
+
+.philosophy-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.philosophy-image:hover img {
+  transform: scale(1.02);
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .philosophy-image {
+    border-radius: 12px;
+    margin-top: 1.5rem;
+  }
+  
+  .philosophy-image img {
+    min-height: 200px; /* Ensure minimum height on iPhone SE */
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 70px 0; /* Reduced from 100px for compact layout */
+  background: #ffffff;
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 10s ease-in-out infinite;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.3rem; /* Reduced from 2.8rem for compact layout */
+  margin-bottom: 2rem; /* Reduced from 3rem */
+  color: #1e293b;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #dc2626;
+  border-radius: 2px;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .contact-section {
+    padding: 50px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .contact-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced min-width from 280px */
+  gap: 1.8rem; /* Reduced from 2.5rem for compact layout */
+  position: relative;
+  z-index: 2;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Single column on iPhone SE */
+    gap: 1.2rem;
+  }
+}
+
+.contact-card {
+  background: #ffffff;
+  padding: 2rem; /* Reduced from 2.5rem for compact layout */
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .contact-card {
+    padding: 1.5rem; /* Reduced padding for iPhone SE */
+    border-radius: 12px;
+  }
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #2563eb;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #2563eb;
+}
+
+.contact-icon {
+  width: 55px; /* Reduced from 60px for compact layout */
+  height: 55px; /* Reduced from 60px */
+  background: #2563eb;
+  color: white;
+  margin: 0 auto 1.2rem; /* Reduced from 1.5rem */
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.05);
+  background: #1d4ed8;
+}
+
+.contact-card h3 {
+  font-size: 1.3rem; /* Reduced from 1.4rem for compact layout */
+  margin-bottom: 0.8rem; /* Reduced from 1rem */
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.contact-card p {
+  color: #64748b;
+  margin-bottom: 0.4rem; /* Reduced from 0.5rem */
+  font-weight: 400;
+  font-size: 0.95rem; /* Slightly reduced for compact layout */
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .contact-icon {
+    width: 45px; /* Smaller icons for iPhone SE */
+    height: 45px;
+    margin: 0 auto 1rem;
+    border-radius: 12px;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.1rem; /* Smaller headings for iPhone SE */
+    margin-bottom: 0.6rem;
+  }
+  
+  .contact-card p {
+    font-size: 0.85rem; /* Smaller text for iPhone SE */
+    line-height: 1.4;
+  }
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 70px 0; /* Reduced from 100px for compact layout */
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cta-section::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 12s ease-in-out infinite;
+}
+
+.cta-section h2 {
+  font-size: 2.3rem; /* Reduced from 2.8rem for compact layout */
+  margin-bottom: 1.5rem; /* Reduced from 2rem */
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  color: white;
+}
+
+.cta-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 16px 40px; /* Reduced from 18px 45px for compact layout */
+  font-size: 1.1rem; /* Reduced from 1.2rem */
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+.cta-button:hover {
+  background: #b91c1c;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .cta-section {
+    padding: 50px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .cta-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 1rem; /* Smaller subtitle for iPhone SE */
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .cta-button {
+    padding: 14px 32px; /* Smaller button for iPhone SE */
+    font-size: 1rem;
+  }
+}
+
+/* Add subtle zoom animation to the hero background */
+@keyframes gradualZoom {
+  0% {
+    background-size: 100%;
+    background-position: center;
+  }
+  100% {
+    background-size: 110%;
+    background-position: center;
+  }
+}
+
+/* Container - Specific to About Page */
+.about-page .container {
+  max-width: 1400px !important;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Responsive Design - Enhanced for iPhone SE */
+@media (max-width: 1024px) {
+  .about-page {
+    padding-top: 110px;
+  }
+  
+  .about-hero {
+    min-height: 60vh;
+    padding: 50px 0 65px;
+  }
+  
+  .about-page .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+  
+  .about-page .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  
+  .philosophy-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 100px;
+  }
+  
+  .about-hero {
+    min-height: 55vh;
+    padding: 45px 0 60px;
+    background-attachment: scroll; /* Disable parallax for better mobile performance */
+  }
+  
+  .about-hero .container {
+    padding: 0 1rem;
+  }
+  
+  .about-hero .hero-content {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .about-hero .hero-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-hero .hero-content h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    line-height: 1.2;
+  }
+  
+  .about-hero .hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .about-hero .particle {
+    width: 3px;
+    height: 3px;
+  }
+  
+  /* Section spacing adjustments */
+  .about-page .about-us-section,
+  .about-page .mission-section,
+  .about-page .core-services-section,
+  .philosophy-section,
+  .contact-section {
+    padding: 50px 0;
+  }
+  
+  .about-page .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  
+  .about-page .feature-card {
+    padding: 1.5rem;
+  }
+  
+  .about-page .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .about-page .stat-card {
+    padding: 1.8rem 1rem;
+  }
+  
+  .about-page .stat-card h3 {
+    font-size: 2.5rem;
+  }
+  
+  /* Services grid mobile adjustment */
+  .about-page .services-grid {
+    flex-direction: column;
+    animation: none;
+    width: 100%;
+  }
+  
+  .services-scroll-container {
+    mask: none;
+    -webkit-mask: none;
+  }
+  
+  .philosophy-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding-top: 90px;
+  }
+  
+  .about-hero {
+    min-height: 50vh;
+    padding: 35px 0 45px;
+  }
+  
+  .about-hero .hero-content {
+    padding: 1.25rem;
+    margin: 0 0.5rem;
+  }
+  
+  .about-hero .hero-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-hero .hero-content h1 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-hero .hero-content p {
+    font-size: 0.9rem;
+  }
+  
+  .about-hero .particle {
+    width: 2px;
+    height: 2px;
+  }
+  
+  /* Container adjustments */
+  .about-page .container {
+    padding: 0 1rem;
+  }
+  
+  /* Section title adjustments */
+  .about-page .about-us-section h2,
+  .about-page .mission-section h2,
+  .about-page .core-services-section h2,
+  .philosophy-text h2,
+  .contact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Feature cards single column */
+  .about-page .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-page .feature-card {
+    padding: 1.25rem;
+  }
+  
+  .about-page .feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Stats grid single column on very small screens */
+  .about-page .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-page .stat-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  /* Startup message adjustments */
+  .startup-message-content {
+    margin: 1.5rem auto 2.5rem;
+    padding: 1.8rem 1.2rem;
+  }
+  
+  .startup-message-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .startup-message-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+/* Disable parallax on mobile for better performance */
+@media (max-width: 768px) {
+  .about-hero {
+    background-attachment: scroll !important;
+  }
+}
+
+/* Startup Message Content Styling */
+.startup-message-content {
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.startup-message-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #dc2626, #2563eb);
+  z-index: 1;
+}
+
+.startup-message-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #1e293b;
+  position: relative;
+  font-weight: 700;
+}
+
+.startup-message-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 1rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.startup-message-content p:last-child {
+  margin-bottom: 0;
+}
+
+.startup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.15);
+  color: #dc2626;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.startup-badge svg {
+  color: #dc2626;
+}
+
+/* iPhone SE specific adjustments */
+@media (max-width: 375px) {
+  .startup-message-content {
+    padding: 1.8rem 1.2rem; /* Reduced padding for iPhone SE */
+    margin: 1.5rem 0.5rem 2rem;
+    border-radius: 6px;
+  }
+  
+  .startup-message-content h2 {
+    font-size: 1.5rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1rem;
+  }
+  
+  .startup-message-content p {
+    font-size: 0.9rem; /* Smaller text for iPhone SE */
+    line-height: 1.6;
+  }
+  
+  .startup-badge {
+    padding: 0.4rem 0.8rem; /* Smaller badge for iPhone SE */
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+}
+
+/* Responsive Design - Mobile First Approach */
+
+/* iPhone SE and very small screens (max-width: 375px) */
+@media (max-width: 375px) {
+  /* Main page adjustments */
+  .about-page {
+    padding-top: 95px; /* Reduced for iPhone SE */
+  }
+  
+  .about-page .container {
+    padding: 0 1rem; /* Tighter padding for very small screens */
+  }
+  
+  /* Hero section adjustments */
+  .about-hero {
+    min-height: 50vh; /* Reduced height for iPhone SE */
+    padding: 40px 0 50px;
+    background-attachment: scroll; /* Disable parallax for better performance */
+  }
+  
+  .about-hero .hero-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    margin-bottom: 1.5rem;
+    gap: 0.25rem;
+  }
+  
+  .about-hero .hero-content h1 {
+    font-size: clamp(1.8rem, 8vw, 2.2rem); /* Better sizing for iPhone SE */
+    margin-bottom: 0.8rem;
+    line-height: 1.15;
+  }
+  
+  .about-hero .hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+  }
+  
+  /* About section adjustments */
+  .about-page .about-us-section {
+    padding: 40px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .about-page .about-us-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-page .about-content p {
+    font-size: 1rem; /* Smaller text for iPhone SE */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  /* Features grid adjustments */
+  .about-page .features-grid {
+    grid-template-columns: 1fr; /* Single column on iPhone SE */
+    gap: 1rem;
+  }
+  
+  .about-page .feature-icon {
+    width: 50px; /* Smaller icons for iPhone SE */
+    height: 50px;
+    margin: 0 auto 1rem;
+    border-radius: 12px;
+  }
+  
+  .about-page .feature-card h3 {
+    font-size: 1.1rem; /* Smaller headings for iPhone SE */
+    margin-bottom: 0.6rem;
+  }
+  
+  .about-page .feature-card p {
+    font-size: 0.85rem; /* Smaller text for iPhone SE */
+    line-height: 1.4;
+  }
+  
+  /* Mission section adjustments */
+  .about-page .mission-section {
+    padding: 50px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .about-page .mission-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-page .mission-content p {
+    font-size: 1rem; /* Smaller text for iPhone SE */
+    line-height: 1.6;
+  }
+  
+  /* Philosophy section adjustments */
+  .philosophy-section {
+    padding: 50px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .philosophy-content {
+    grid-template-columns: 1fr; /* Single column on iPhone SE */
+    gap: 2rem;
+  }
+  
+  .philosophy-text h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1.5rem;
+  }
+  
+  .philosophy-text p {
+    font-size: 1rem; /* Smaller text for iPhone SE */
+    line-height: 1.6;
+  }
+  
+  /* Service cards adjustments */
+  .about-page .service-card {
+    width: 280px; /* Smaller cards for iPhone SE */
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 300px;
+    border-radius: 12px;
+  }
+  
+  .about-page .service-image {
+    height: 140px; /* Smaller image height for iPhone SE */
+  }
+  
+  .about-page .service-content {
+    padding: 1.2rem; /* Smaller padding for iPhone SE */
+  }
+  
+  .about-page .service-content h3 {
+    font-size: 1.1rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-page .service-content p {
+    font-size: 0.85rem; /* Smaller text for iPhone SE */
+    line-height: 1.4;
+  }
+  
+  /* Stats section adjustments */
+  .stats-section {
+    padding: 50px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on iPhone SE */
+    gap: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1.5rem 1rem; /* Smaller padding for iPhone SE */
+    border-radius: 8px;
+  }
+  
+  .stat-number {
+    font-size: 2rem; /* Smaller numbers for iPhone SE */
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem; /* Smaller labels for iPhone SE */
+  }
+  
+  /* Values section adjustments */
+  .values-section {
+    padding: 50px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .values-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1.5rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr; /* Single column on iPhone SE */
+    gap: 1rem;
+  }
+  
+  .value-card {
+    padding: 1.5rem 1rem; /* Smaller padding for iPhone SE */
+    border-radius: 8px;
+  }
+  
+  .value-card h3 {
+    font-size: 1.1rem; /* Smaller headings for iPhone SE */
+    margin-bottom: 0.6rem;
+  }
+  
+  .value-card p {
+    font-size: 0.85rem; /* Smaller text for iPhone SE */
+    line-height: 1.4;
+  }
+  
+  /* Startup message adjustments */
+  .startup-message-content {
+    padding: 1.8rem 1.2rem; /* Reduced padding for iPhone SE */
+    margin: 1.5rem 0.5rem 2rem;
+    border-radius: 6px;
+  }
+  
+  .startup-message-content h2 {
+    font-size: 1.5rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1rem;
+  }
+  
+  .startup-message-content p {
+    font-size: 0.9rem; /* Smaller text for iPhone SE */
+    line-height: 1.6;
+  }
+  
+  .startup-badge {
+    padding: 0.4rem 0.8rem; /* Smaller badge for iPhone SE */
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+}
+
+/* Small tablets and large phones (max-width: 768px) */
+@media (max-width: 768px) and (min-width: 376px) {
+  .about-page {
+    padding-top: 110px;
+  }
+  
+  .about-hero {
+    min-height: 60vh;
+    padding: 50px 0 60px;
+    background-attachment: scroll;
+  }
+  
+  .about-hero .hero-content {
+    padding: 1.8rem;
+    margin: 0 1rem;
+  }
+  
+  .about-hero .hero-badge {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .philosophy-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .startup-message-content {
+    padding: 1.8rem;
+    margin: 1.5rem 1rem 2rem;
+    border-radius: 6px;
+  }
+  
+  .startup-message-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .startup-message-content p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet landscape and small desktops (min-width: 768px and max-width: 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .about-page .container {
+    max-width: 1200px !important;
+    padding: 0 2rem;
+  }
+  
+  .about-hero .hero-content {
+    padding: 2.5rem;
+  }
+  
+  .philosophy-content {
+    gap: 3rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
