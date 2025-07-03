@@ -26,7 +26,7 @@ const Header = () => {
               <FaPhone className="header-contact-icon" style={{color: '#dc2626 !important', fill: '#dc2626'}} />
               <span>+91 9991762005</span>
             </a>
-            <a href="mailto:krishan@khstrdesign.com" className="header-contact-item">
+            <a href="https://mail.google.com/mail/?view=cm&to=krishan@khstrdesign.com" target="_blank" className="header-contact-item">
               <FaEnvelope className="header-contact-icon" style={{color: '#dc2626 !important', fill: '#dc2626'}} />
               <span>krishan@khstrdesign.com</span>
             </a>
