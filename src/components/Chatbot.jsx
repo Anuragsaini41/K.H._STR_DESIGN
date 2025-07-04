@@ -249,7 +249,7 @@ const Chatbot = () => {
               <span>+91 9991762005</span>
             </a>
             <a 
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=krishan@khstrdesign.com&su=Inquiry%20from%20K.H.%20STR%20Design%20Website" 
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=krishan@khstrdesign.com&su=Inquiry%20for%20K.H.%20STR%20Design%20Solution" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="contact-item"

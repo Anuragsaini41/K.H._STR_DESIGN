@@ -127,7 +127,7 @@ svg.header-contact-icon {
 /* Main Navigation - Fixed */
 .navbar {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  padding: 0.7rem 0;
+  padding: 0 rem 0;
   box-shadow: none;
   border-bottom: none;
   position: relative;
@@ -139,10 +139,11 @@ svg.header-contact-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 60px;
+  min-height: 120px;
   position: relative;
   z-index: 5;
   overflow: visible !important;
+  padding: 0 2rem;
 }
 
 .logo {
@@ -170,66 +171,43 @@ svg.header-contact-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1px 3px;
+  padding: 12px 24px;
   z-index: 2;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 18px;
-  box-shadow: 
-    0 12px 28px rgba(0, 0, 0, 0.45),
-    0 0 0 2px rgba(255, 255, 255, 0.4),
-    inset 0 0 25px rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(12px);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: none;
+  transition: all 0.3s ease;
   transform: translateY(0);
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  height: 120px;
 }
 
 .logo:hover {
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 
-    0 18px 35px rgba(0, 0, 0, 0.55),
-    0 0 0 3px rgba(255, 255, 255, 0.6),
-    inset 0 0 30px rgba(255, 255, 255, 0.4);
-  transform: translateY(-6px);
+  background: white;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 .logo-image {
-  height: 70px;
+  height: 90px;
   width: auto;
-  max-width: 250px;
+  
+  max-width: 500px;
   object-fit: contain;
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 1)) 
-         drop-shadow(0 4px 6px rgba(0, 0, 0, 0.6))
-         contrast(1.2) 
-         brightness(1.1)
-         saturate(1.15);
+  transition: all 0.3s ease;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
   z-index: 3;
-  border-radius: 8px;
-  padding: 1px 3px;
-  animation: pulse 2s infinite alternate ease-in-out;
+  border-radius: 0;
+  padding: 0;
 }
 
 .scrolled .logo-image {
-  height: 58px;
+  height: 80px;
 }
 
-@keyframes pulse {
-  0% {
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) 
-           drop-shadow(0 3px 5px rgba(0, 0, 0, 0.5))
-           contrast(1.15) 
-           brightness(1.05)
-           saturate(1.1);
-  }
-  100% {
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1)) 
-           drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6))
-           contrast(1.2) 
-           brightness(1.1)
-           saturate(1.15);
-  }
-}
+/* Remove all logo animations */
+/* Logo pulse animation - Disabled */
 
 .logo-fallback {
   font-size: 22px;
@@ -632,25 +610,30 @@ svg.header-contact-icon {
   }
   
   .navbar .container {
-    min-height: 50px;
+    min-height: 80px;
   }
   
   .logo {
-    padding: 2px 4px;
-    border-radius: 12px;
+    height: 70px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.9);
   }
   
   .logo-image {
-    height: 50px;
-    padding: 2px 5px;
+    height: 60px;
+    max-width: 350px;
+    padding: 0;
   }
   
   .scrolled .logo-image {
-    height: 45px;
+    height: 60px;
   }
   
   .logo-glow {
-    opacity: 0.6;
+    display: none;
   }
   
   /* WhatsApp button is no longer fixed - removed fixed position styling */
@@ -762,22 +745,27 @@ svg.header-contact-icon {
   }
   
   .navbar .container {
-    min-height: 45px;
+    min-height: 70px;
     padding: 0 0.75rem;
   }
   
   .logo {
-    padding: 1px 3px;
-    border-radius: 10px;
+    height: 60px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.9);
   }
   
   .logo-image {
-    height: 45px;
-    padding: 1px 3px;
+    height: 50px;
+    max-width: 300px;
+    padding: 0;
   }
   
   .scrolled .logo-image {
-    height: 40px;
+    height: 50px;
   }
   
   .mobile-menu-toggle {
@@ -848,21 +836,27 @@ svg.header-contact-icon {
   }
   
   .navbar .container {
-    min-height: 40px;
+    min-height: 65px;
     padding: 0 0.5rem;
   }
   
   .logo {
-    padding: 1px 2px;
+    height: 55px;
+    padding: 3px 6px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
   }
   
   .logo-image {
-    height: 40px;
-    padding: 1px 2px;
+    height: 45px;
+    max-width: 250px;
+    padding: 0;
   }
   
   .scrolled .logo-image {
-    height: 35px;
+    height: 45px;
   }
   
   .mobile-menu-toggle {
@@ -902,12 +896,21 @@ svg.header-contact-icon {
   }
   
   .navbar .container {
-    min-height: 55px;
+    min-height: 70px;
+  }
+  
+  .logo {
+    height: 50px;
+    padding: 4px 8px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
   }
   
   .logo-image {
-    height: 58px;
-    max-width: 200px;
+    height: 40px;
+    max-width: 220px;
   }
   
   .nav-link {
@@ -928,56 +931,21 @@ svg.header-contact-icon {
   }
 }
 
-/* Logo Glow Effect */
+/* Logo Glow Effect - Disabled */
 .logo-glow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), transparent 70%);
-  border-radius: 15px;
-  opacity: 0.5;
-  filter: blur(15px);
-  z-index: 2;
-  animation: glowing 3s infinite alternate ease-in-out;
+  display: none;
 }
 
-@keyframes glowing {
-  0% {
-    opacity: 0.3;
-    filter: blur(10px);
-  }
-  100% {
-    opacity: 0.7;
-    filter: blur(20px);
-  }
-}
+/* Remove all logo animations */
 
-/* Extra animation for logo hover */
+/* Extra animation for logo hover - Disabled */
 .logo:hover .logo-image {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1)) 
-         drop-shadow(0 4px 8px rgba(0, 0, 0, 0.6))
-         contrast(1.2) 
-         brightness(1.1)
-         saturate(1.2);
+  transform: none;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
 }
 
 .logo:hover .logo-glow {
-  animation: fastGlow 1s infinite alternate ease-in-out;
-  opacity: 0.8;
-}
-
-@keyframes fastGlow {
-  0% {
-    opacity: 0.5;
-    filter: blur(10px);
-  }
-  100% {
-    opacity: 0.9;
-    filter: blur(25px);
-  }
+  display: none;
 }
 
 /* Dropdown hover effect - consolidated with styles above */

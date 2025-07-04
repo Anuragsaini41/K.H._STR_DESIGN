@@ -69,7 +69,7 @@ const About = () => {
             <FaAward />
             <span>About Our Company</span>
           </Motion.div>
-          <h2>Know About K.H. STR Design Solution</h2>
+          <h2 className="about-heading">Know About K.H. STR Design Solution</h2>
           <p>Dynamic Start-up Specializing in Structural Steel Design</p>
         </Motion.div>
 
