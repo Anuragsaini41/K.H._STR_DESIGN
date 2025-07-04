@@ -736,6 +736,372 @@
   100% { background-size: 110% 110%; }
 }
 
+/* Core Services Section */
+.core-services-section {
+  padding: 70px 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.core-services-section::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(220, 38, 38, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 12s ease-in-out infinite;
+}
+
+.core-services-section h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.core-services-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #dc2626;
+  border-radius: 2px;
+}
+
+.core-services-section p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Services Scroll Container */
+.services-scroll-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+  z-index: 2;
+}
+
+.services-scroll-container::before,
+.services-scroll-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.services-scroll-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.services-scroll-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+/* Services Grid with Infinite Loop Animation */
+.services-grid {
+  display: flex;
+  gap: 2rem;
+  width: calc(350px * 8 + 2rem * 7); /* 8 cards, 7 gaps */
+  animation: servicesInfiniteScroll 30s linear infinite;
+  will-change: transform;
+}
+
+@keyframes servicesInfiniteScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 4 - 2rem * 4)); /* Move by 4 cards width + 4 gaps */
+  }
+}
+
+.services-grid:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for all browsers */
+.services-scroll-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.services-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Service Card */
+.service-card {
+  flex: 0 0 350px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #dc2626;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #dc2626, #2563eb);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-content {
+  padding: 1.5rem;
+}
+
+.service-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.service-content p {
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 70px 0;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatReverse 15s ease-in-out infinite;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 2rem;
+  color: #1e293b;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #dc2626;
+  border-radius: 2px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #dc2626, #2563eb);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: #dc2626;
+  color: white;
+  margin: 0 auto 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.05);
+  background: #b91c1c;
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.contact-card p {
+  color: #64748b;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 70px 0;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.cta-section h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(135deg, #b91c1c, #991b1b);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
 /* Responsive Design - Mobile First Approach */
 
 /* iPhone SE and very small screens (max-width: 375px) */
@@ -956,6 +1322,115 @@
     font-size: 0.75rem;
     gap: 6px;
   }
+  
+  /* Services section adjustments */
+  .core-services-section {
+    padding: 40px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .core-services-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1rem;
+  }
+  
+  .core-services-section p {
+    font-size: 1rem; /* Smaller text for iPhone SE */
+    margin-bottom: 2rem;
+  }
+  
+  .services-grid {
+    padding: 0 1rem; /* Reduced padding for iPhone SE */
+    gap: 1.5rem;
+    animation: autoScrollMobile 35s linear infinite; /* Slower for mobile */
+  }
+  
+  /* Adjusted animation for mobile */
+  @keyframes autoScrollMobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-280px * 4 - 1.5rem * 4)); /* Smaller card width for mobile */
+    }
+  }
+  
+  .service-card {
+    flex: 0 0 280px; /* Smaller cards for iPhone SE */
+  }
+  
+  .service-image {
+    height: 160px; /* Smaller image height */
+  }
+  
+  .service-content {
+    padding: 1.2rem; /* Smaller content padding */
+  }
+  
+  .service-content h3 {
+    font-size: 1.1rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 0.6rem;
+  }
+  
+  .service-content p {
+    font-size: 0.85rem; /* Smaller text for iPhone SE */
+    line-height: 1.4;
+  }
+  
+  /* Contact section adjustments */
+  .contact-section {
+    padding: 40px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .contact-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr; /* Single column on iPhone SE */
+    gap: 1.5rem;
+  }
+  
+  .contact-card {
+    padding: 1.5rem 1rem; /* Smaller padding for iPhone SE */
+  }
+  
+  .contact-icon {
+    width: 50px; /* Smaller icon for iPhone SE */
+    height: 50px;
+    margin: 0 auto 1rem;
+    border-radius: 12px;
+  }
+  
+  .contact-card h3 {
+    font-size: 1.1rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 0.6rem;
+  }
+  
+  .contact-card p {
+    font-size: 0.85rem; /* Smaller text for iPhone SE */
+    line-height: 1.4;
+  }
+  
+  /* CTA section adjustments */
+  .cta-section {
+    padding: 40px 0; /* Reduced padding for iPhone SE */
+  }
+  
+  .cta-section h2 {
+    font-size: 1.8rem; /* Smaller heading for iPhone SE */
+    margin-bottom: 1rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 1rem; /* Smaller subtitle for iPhone SE */
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem; /* Smaller button for iPhone SE */
+    font-size: 1rem;
+  }
 }
 
 /* Small tablets and large phones (max-width: 768px) */
@@ -1018,6 +1493,54 @@
   .startup-message-content p {
     font-size: 0.95rem;
   }
+  
+  /* Services section adjustments */
+  .core-services-section {
+    padding: 50px 0;
+  }
+  
+  .services-grid {
+    padding: 0 1.5rem;
+    gap: 1.8rem;
+    animation: autoScrollTablet 32s linear infinite; /* Medium speed for tablet */
+  }
+  
+  /* Adjusted animation for tablet */
+  @keyframes autoScrollTablet {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-320px * 4 - 1.8rem * 4)); /* Medium card width for tablet */
+    }
+  }
+  
+  .service-card {
+    flex: 0 0 320px;
+  }
+  
+  .service-image {
+    height: 180px;
+  }
+  
+  .service-content {
+    padding: 1.3rem;
+  }
+  
+  /* Contact section adjustments */
+  .contact-section {
+    padding: 50px 0;
+  }
+  
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+  
+  /* CTA section adjustments */
+  .cta-section {
+    padding: 50px 0;
+  }
 }
 
 /* Tablet landscape and small desktops (min-width: 768px and max-width: 1199px) */
@@ -1043,5 +1566,70 @@
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+  
+  /* Services section adjustments */
+  .services-grid {
+    padding: 0 2rem;
+  }
+  
+  .service-card {
+    flex: 0 0 350px;
+  }
+  
+  /* Contact section adjustments */
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Responsive Design - Philosophy Section Adjustments */
+@media (max-width: 768px) {
+  .philosophy-section {
+    padding: 40px 0;
+  }
+  .philosophy-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .philosophy-text {
+    text-align: center;
+  }
+  .philosophy-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .philosophy-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .philosophy-image img {
+    height: 180px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 375px) {
+  .philosophy-section {
+    padding: 25px 0;
+  }
+  .philosophy-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+  .philosophy-text p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 0.7rem;
+  }
+  .philosophy-image img {
+    height: 120px;
+    border-radius: 8px;
   }
 }

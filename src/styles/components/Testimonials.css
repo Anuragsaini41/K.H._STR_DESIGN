@@ -208,6 +208,70 @@
   z-index: 1;
 }
 
+/* --- Vision Card / Section Styling (Improved for Compactness & Centering) --- */
+.vision-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  margin: 32px auto 40px auto;
+  padding: 28px 18px 22px 18px;
+  max-width: 1100px;
+  position: relative;
+  text-align: center;
+  border-top: 5px solid;
+  border-image: linear-gradient(90deg, #dc2626 0%, #a855f7 100%) 1;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vision-card h2, .vision-card h3, .vision-card-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a2233;
+  margin-bottom: 14px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+.vision-card p, .vision-card-desc {
+  font-size: 1.08rem;
+  color: #5a6473;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .vision-card {
+    padding: 18px 8px 14px 8px;
+    border-radius: 12px;
+    margin: 18px 4px 24px 4px;
+    max-width: 98vw;
+  }
+  .vision-card h2, .vision-card h3, .vision-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+  .vision-card p, .vision-card-desc {
+    font-size: 0.98rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .vision-card {
+    padding: 10px 2px 8px 2px;
+    border-radius: 7px;
+    margin: 8px 1px 12px 1px;
+  }
+  .vision-card h2, .vision-card h3, .vision-card-title {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  .vision-card p, .vision-card-desc {
+    font-size: 0.93rem;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .testimonials-section {
