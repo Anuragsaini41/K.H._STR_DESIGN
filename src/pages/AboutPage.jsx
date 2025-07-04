@@ -177,20 +177,20 @@ const AboutPage = () => {
       </section>
 
       {/* Core Services Section */}
-      <section className="core-services-section">
+      <section className="about-core-services-section">
         <div className="container">
           <h2>Our Core Services</h2>
           <p>We provide comprehensive structural engineering solutions using advanced technology and expertise.</p>
           
-          <div className="services-scroll-container">
-            <div className="services-grid">
+          <div className="about-services-scroll-container">
+            <div className="about-services-grid">
               {/* Duplicate services for continuous scroll effect */}
               {[...services, ...services].map((service, index) => (
-                <div key={index} className="service-card">
-                  <div className="service-image">
+                <div key={index} className="about-service-card">
+                  <div className="about-service-image">
                     <img src={service.image} alt={service.title} />
                   </div>
-                  <div className="service-content">
+                  <div className="about-service-content">
                     <h3>{service.title}</h3>
                     <p>{service.description}</p>
                   </div>

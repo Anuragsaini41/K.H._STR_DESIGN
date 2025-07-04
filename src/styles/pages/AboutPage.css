@@ -736,15 +736,15 @@
   100% { background-size: 110% 110%; }
 }
 
-/* Core Services Section */
-.core-services-section {
+/* About Page Core Services Section */
+.about-core-services-section {
   padding: 70px 0;
   background: #ffffff;
   position: relative;
   overflow: hidden;
 }
 
-.core-services-section::before {
+.about-core-services-section::before {
   content: '';
   position: absolute;
   top: -30%;
@@ -756,7 +756,7 @@
   animation: float 12s ease-in-out infinite;
 }
 
-.core-services-section h2 {
+.about-core-services-section h2 {
   text-align: center;
   font-size: 2.3rem;
   margin-bottom: 1rem;
@@ -766,7 +766,7 @@
   z-index: 2;
 }
 
-.core-services-section h2::after {
+.about-core-services-section h2::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -778,7 +778,7 @@
   border-radius: 2px;
 }
 
-.core-services-section p {
+.about-core-services-section p {
   text-align: center;
   font-size: 1.1rem;
   color: #64748b;
@@ -790,16 +790,16 @@
   z-index: 2;
 }
 
-/* Services Scroll Container */
-.services-scroll-container {
+/* About Page Services Scroll Container */
+.about-services-scroll-container {
   position: relative;
   overflow: hidden;
   margin-top: 2rem;
   z-index: 2;
 }
 
-.services-scroll-container::before,
-.services-scroll-container::after {
+.about-services-scroll-container::before,
+.about-services-scroll-container::after {
   content: '';
   position: absolute;
   top: 0;
@@ -809,26 +809,26 @@
   pointer-events: none;
 }
 
-.services-scroll-container::before {
+.about-services-scroll-container::before {
   left: 0;
   background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
-.services-scroll-container::after {
+.about-services-scroll-container::after {
   right: 0;
   background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
-/* Services Grid with Infinite Loop Animation */
-.services-grid {
+/* About Page Services Grid with Infinite Loop Animation */
+.about-services-grid {
   display: flex;
   gap: 2rem;
   width: calc(350px * 8 + 2rem * 7); /* 8 cards, 7 gaps */
-  animation: servicesInfiniteScroll 30s linear infinite;
+  animation: aboutServicesInfiniteScroll 30s linear infinite;
   will-change: transform;
 }
 
-@keyframes servicesInfiniteScroll {
+@keyframes aboutServicesInfiniteScroll {
   0% {
     transform: translateX(0);
   }
@@ -837,21 +837,21 @@
   }
 }
 
-.services-grid:hover {
+.about-services-grid:hover {
   animation-play-state: paused;
 }
 
 /* Hide scrollbar for all browsers */
-.services-scroll-container {
+.about-services-scroll-container {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.services-scroll-container::-webkit-scrollbar {
+.about-services-scroll-container::-webkit-scrollbar {
   display: none;
 }
 
-/* Service Card */
-.service-card {
+/* About Page Service Card */
+.about-service-card {
   flex: 0 0 350px;
   background: #ffffff;
   border-radius: 12px;
@@ -862,13 +862,13 @@
   position: relative;
 }
 
-.service-card:hover {
+.about-service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   border-color: #dc2626;
 }
 
-.service-card::before {
+.about-service-card::before {
   content: '';
   position: absolute;
   top: 0;
@@ -880,39 +880,39 @@
   transition: transform 0.3s ease;
 }
 
-.service-card:hover::before {
+.about-service-card:hover::before {
   transform: scaleX(1);
 }
 
-.service-image {
+.about-service-image {
   position: relative;
   height: 200px;
   overflow: hidden;
 }
 
-.service-image img {
+.about-service-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.service-card:hover .service-image img {
+.about-service-card:hover .about-service-image img {
   transform: scale(1.05);
 }
 
-.service-content {
+.about-service-content {
   padding: 1.5rem;
 }
 
-.service-content h3 {
+.about-service-content h3 {
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
   color: #1e293b;
   font-weight: 600;
 }
 
-.service-content p {
+.about-service-content p {
   color: #64748b;
   line-height: 1.6;
   font-size: 0.9rem;
@@ -1338,14 +1338,14 @@
     margin-bottom: 2rem;
   }
   
-  .services-grid {
+  .about-services-grid {
     padding: 0 1rem; /* Reduced padding for iPhone SE */
     gap: 1.5rem;
-    animation: autoScrollMobile 35s linear infinite; /* Slower for mobile */
+    animation: aboutServicesScrollMobile 35s linear infinite; /* Slower for mobile */
   }
   
   /* Adjusted animation for mobile */
-  @keyframes autoScrollMobile {
+  @keyframes aboutServicesScrollMobile {
     0% {
       transform: translateX(0);
     }
@@ -1354,24 +1354,24 @@
     }
   }
   
-  .service-card {
+  .about-service-card {
     flex: 0 0 280px; /* Smaller cards for iPhone SE */
   }
   
-  .service-image {
+  .about-service-image {
     height: 160px; /* Smaller image height */
   }
   
-  .service-content {
+  .about-service-content {
     padding: 1.2rem; /* Smaller content padding */
   }
   
-  .service-content h3 {
+  .about-service-content h3 {
     font-size: 1.1rem; /* Smaller heading for iPhone SE */
     margin-bottom: 0.6rem;
   }
   
-  .service-content p {
+  .about-service-content p {
     font-size: 0.85rem; /* Smaller text for iPhone SE */
     line-height: 1.4;
   }
@@ -1494,19 +1494,19 @@
     font-size: 0.95rem;
   }
   
-  /* Services section adjustments */
-  .core-services-section {
+  /* About Page Services section adjustments */
+  .about-core-services-section {
     padding: 50px 0;
   }
   
-  .services-grid {
+  .about-services-grid {
     padding: 0 1.5rem;
     gap: 1.8rem;
-    animation: autoScrollTablet 32s linear infinite; /* Medium speed for tablet */
+    animation: aboutServicesScrollTablet 32s linear infinite; /* Medium speed for tablet */
   }
   
   /* Adjusted animation for tablet */
-  @keyframes autoScrollTablet {
+  @keyframes aboutServicesScrollTablet {
     0% {
       transform: translateX(0);
     }
@@ -1515,15 +1515,15 @@
     }
   }
   
-  .service-card {
+  .about-service-card {
     flex: 0 0 320px;
   }
   
-  .service-image {
+  .about-service-image {
     height: 180px;
   }
   
-  .service-content {
+  .about-service-content {
     padding: 1.3rem;
   }
   
@@ -1568,12 +1568,12 @@
     gap: 2rem;
   }
   
-  /* Services section adjustments */
-  .services-grid {
+  /* About Page Services section adjustments */
+  .about-services-grid {
     padding: 0 2rem;
   }
   
-  .service-card {
+  .about-service-card {
     flex: 0 0 350px;
   }
   

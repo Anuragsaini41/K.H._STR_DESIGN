@@ -49,6 +49,7 @@
   justify-items: center;
   place-items: center;
   justify-content: center;
+  
 }
 
 .service-item.reference-item {
@@ -560,6 +561,10 @@
 .services-grid {
   margin-top: 3rem;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 2rem;
+
 }
 
 .wide-grid {
@@ -568,6 +573,7 @@
   gap: 2rem;
   width: 100%;
   max-width: 100%;
+  
 }
 
 /* Clickable Service Items */
@@ -582,6 +588,16 @@
 
 .service-item.clickable:active {
   transform: translateY(-4px) scale(0.98);
+}
+
+
+
+
+/* Ensure no horizontal scrolling containers */
+.services-scroll-container,
+.services-marquee,
+.services-infinite-scroll {
+  display: none !important;
 }
 
 /* Responsive Design */
