@@ -116,8 +116,8 @@
   position: fixed;
   bottom: 100px; /* Adjusted distance from bottom to be more consistent with mobile view */
   right: 30px;
-  width: 380px;
-  height: 550px; /* Increased height */
+  width: 360px;
+  height: 480px; /* Reduced height from 480px to 400px */
   background: white;
   border-radius: 20px;
   box-shadow: var(--shadow-xl), 0 0 0 1px rgba(220, 38, 38, 0.1);
@@ -130,6 +130,7 @@
   transition: var(--transition-base);
   border: 2px solid rgba(220, 38, 38, 0.1);
   backdrop-filter: blur(20px);
+  max-height: 80vh; /* Reduced max-height to prevent it from going too high */
 }
 
 .chatbot-window.open {
@@ -142,13 +143,14 @@
 .chatbot-header {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  padding: 1.5rem;
+  padding: 0.75rem 1rem;
   border-radius: 20px 20px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+  min-height: 50px;
 }
 
 .chatbot-header::before {
@@ -175,8 +177,8 @@
 }
 
 .chatbot-avatar {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   background: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   display: flex;
@@ -188,7 +190,7 @@
 }
 
 .chatbot-header-text h3 {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
   margin: 0;
   color: white;
@@ -235,9 +237,9 @@
 
 .chatbot-messages {
   flex: 1;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
   overflow-y: auto;
-  height: 320px; /* Further increased height to ensure first message visibility */
+  height: 250px; /* Reduced height from 320px to 250px */
   background: linear-gradient(to bottom, #ffffff, #f8fafc);
   transition: height 0.3s ease;
 }
@@ -496,11 +498,11 @@
 }
 
 .quick-replies {
-  padding: 1rem;
+  padding: 0.5rem 0.75rem;
   border-top: 1px solid var(--border-color);
   background: linear-gradient(135deg, #fafafa, #ffffff);
   transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
-  min-height: 20px; /* Minimum height to maintain layout consistency */
+  min-height: 15px; /* Minimum height to maintain layout consistency */
   overflow: hidden;
   z-index: 2; /* Ensure it appears above other elements */
 }
@@ -508,7 +510,7 @@
 .quick-replies.visible {
   opacity: 1;
   visibility: visible;
-  max-height: 180px; /* Reduced height to show default message */
+  max-height: 90px; /* Reduced height from 120px to 90px */
   overflow-y: auto; /* Allow scrolling if there are many options */
 }
 
@@ -546,9 +548,9 @@
   background: white;
   border: 1px solid var(--border-color);
   color: var(--text-primary);
-  padding: 0.4rem 0.85rem; /* Further reduced padding */
+  padding: 0.3rem 0.65rem; /* Further reduced padding */
   border-radius: 25px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   cursor: pointer;
   transition: var(--transition-base), transform 0.3s ease, opacity 0.3s ease;
   font-weight: 600;
@@ -556,7 +558,7 @@
   position: relative;
   overflow: hidden;
   animation: fadeInButton 0.4s forwards;
-  margin-bottom: 0.25rem; /* Reduced margin */
+  margin-bottom: 0.2rem; /* Further reduced margin */
 }
 
 @keyframes fadeInButton {
@@ -594,11 +596,11 @@
 }
 
 .chatbot-contact-info {
-  padding: 1.25rem;
+  padding: 0.75rem;
   background: linear-gradient(135deg, #f8fafc, #ffffff);
   border-top: 1px solid var(--border-color);
   border-radius: 0 0 20px 20px;
-  min-height: 30px; /* Minimum height to maintain layout consistency */
+  min-height: 20px; /* Reduced minimum height */
   position: relative;
   z-index: 1;
 }
@@ -606,17 +608,17 @@
 .contact-items {
   display: flex;
   justify-content: space-between;
-  gap: 0.6rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.75rem 0.875rem;
-  border-radius: 12px;
-  font-size: 0.775rem;
+  gap: 0.3rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
   color: var(--text-secondary);
   text-decoration: none;
   transition: var(--transition-base);
@@ -628,7 +630,7 @@
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
-  min-width: 100px;
+  min-width: 80px;
 }
 
 .contact-item::before {
@@ -657,8 +659,8 @@
 
 .contact-item svg {
   flex-shrink: 0;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 .contact-item span {
@@ -668,7 +670,7 @@
 }
 
 .chatbot-input {
-  padding: 1.5rem;
+  padding: 0.75rem;
   border-top: 1px solid var(--border-color);
   background: linear-gradient(135deg, #fafafa, #ffffff);
   border-radius: 0 0 20px 20px;
@@ -677,10 +679,10 @@
 .input-container {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   background: white;
   border-radius: 50px;
-  padding: 0.75rem 1.25rem;
+  padding: 0.5rem 1rem;
   border: 2px solid var(--border-color);
   transition: var(--transition-base);
   box-shadow: var(--shadow-sm);
@@ -697,8 +699,8 @@
   border: none;
   outline: none;
   background: none;
-  padding: 0.5rem 0;
-  font-size: 0.95rem;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
   color: var(--text-primary);
   font-weight: 500;
 }
@@ -709,8 +711,8 @@
 }
 
 .send-button {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border: none;
   border-radius: 50%;
@@ -789,16 +791,17 @@
     right: 5px;
     left: 5px;
     width: auto;
-    height: 80vh; /* Reduced height to fit above toggle */
+    height: 65vh; /* Reduced height to fit better on mobile */
     min-height: 350px;
+    max-height: 500px; /* Add max-height for mobile */
     border-radius: 16px;
   }
   .chatbot-header {
-    padding: 0.7rem 0.8rem;
-    min-height: 56px;
+    padding: 0.5rem 0.75rem;
+    min-height: 45px;
   }
   .chatbot-messages {
-    height: 45vh; /* Adjusted height for mobile view */
+    height: 35vh; /* Reduced height for mobile view */
     min-height: 120px;
     padding: 0.5rem 0.3rem;
     font-size: 0.92rem;
@@ -813,40 +816,40 @@
     gap: 0.4rem;
   }
   .quick-reply-btn {
-    padding: 0.35rem 0.6rem;
-    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.65rem;
     border-radius: 20px;
-    margin-bottom: 0.25rem; /* Reduced margin on mobile */
+    margin-bottom: 0.15rem; /* Further reduced margin on mobile */
   }
   
   .quick-replies.visible {
-    max-height: 150px; /* Reduced height on mobile */
-    padding: 0.7rem 0.5rem;
+    max-height: 75px; /* Further reduced height on mobile */
+    padding: 0.5rem 0.4rem;
   }
   .chatbot-contact-info {
-    padding: 0.7rem 0.5rem;
+    padding: 0.5rem;
   }
   .contact-items {
-    gap: 0.3rem;
+    gap: 0.25rem;
   }
   .contact-item {
-    padding: 0.5rem 0.6rem;
-    font-size: 0.7rem;
-    min-width: 80px;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.65rem;
+    min-width: 70px;
   }
   .chatbot-input {
-    padding: 0.7rem 0.5rem;
+    padding: 0.5rem;
   }
   .input-container {
-    padding: 0.5rem 0.7rem;
-    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    gap: 0.4rem;
   }
   .input-container input {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   .send-button {
-    width: 38px;
-    height: 38px;
+    width: 35px;
+    height: 35px;
     position: relative;
     z-index: 1; /* Ensure proper stacking */
   }
@@ -871,37 +874,38 @@
     right: 2px;
     bottom: 75px; /* Position above the toggle button for smallest screens */
     border-radius: 10px;
-    height: 70vh; /* Reduced height to fit above toggle */
+    height: 60vh; /* Further reduced height to fit above toggle */
+    max-height: 450px; /* Add max-height for smallest screens */
     z-index: 1000;
   }
   .chatbot-header {
-    padding: 0.5rem 0.5rem;
-    min-height: 48px;
+    padding: 0.4rem 0.5rem;
+    min-height: 40px;
   }
   .chatbot-messages {
-    height: 40vh; /* Adjusted for smallest screens */
+    height: 30vh; /* Adjusted for smallest screens */
     font-size: 0.85rem;
   }
   .quick-reply-btn {
-    font-size: 0.68rem;
-    padding: 0.3rem 0.45rem;
-    margin-bottom: 0.2rem;
+    font-size: 0.6rem;
+    padding: 0.2rem 0.35rem;
+    margin-bottom: 0.1rem;
   }
   
   .quick-replies.visible {
-    max-height: 140px;
-    padding: 0.6rem 0.4rem;
+    max-height: 65px;
+    padding: 0.4rem 0.3rem;
   }
   .contact-item {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     min-width: 60px;
-    padding: 0.4rem 0.4rem;
+    padding: 0.35rem 0.4rem;
   }
   .input-container input {
     font-size: 0.8rem;
   }
   .send-button {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
   }
 }
